@@ -11,6 +11,8 @@
     <h2>Rellene la Encuesta por Favor:</h2>
     
     <form>
+        <fieldset>
+        <legend><h4> Datos Personales </h4></legend>
         Nombre: <input type="text"/>
         <br><br>
         Apellidos: <input type="text"/>
@@ -27,7 +29,9 @@
         <input type="radio" id="fem" name="sexo" value="Femenino">
         <label for="fem">Femenino</label><br><br>
         Teléfono: <input type="tel" name="telf"/>
-        <br><br>
+        </fieldset>
+        <fieldset>
+            <legend><h4> Otros </h4></legend>
         Color Favorito: <input type="color" name="color_control"/>
         <br><br>
         <label for="cars">Coche propio:</label> <br><br>
@@ -53,8 +57,11 @@
         </select>
         <br><br>
         Contraseña: <input type="password">
+        </fieldset>
         <br><br>
-        <input type="submit" value="ENVIAR!"/>
+        <center>
+        <input type="submit" value="ENVIAR"/>  <input type="reset" value="BORRAR"/>
+        </center>
         </form>
     
 
