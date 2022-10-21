@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Red Social</title>
+</head>
+<body>
+
+    <h2>Rellene la Encuesta por Favor:</h2>
+    
+    <form>
+        Nombre: <input type="text"/>
+        <br><br>
+        Apellidos: <input type="text"/>
+        <br><br>
+        Correo Eletrónico: <input type="email"/>
+        <br><br>
+        Fecha de nacimiento: <input type="date" name="nacimiento"/>
+        <br><br>
+        Edad: <input type="number" name="number_control" min="0" max="100" value="0"/>
+        <br><br>
+        Sexo: <br>
+        <input type="radio" id="mas" name="sexo" value="Masculino">
+        <label for="mas">Masculino</label><br>
+        <input type="radio" id="fem" name="sexo" value="Femenino">
+        <label for="fem">Femenino</label><br><br>
+        Teléfono: <input type="tel" name="telf"/>
+        <br><br>
+        Color Favorito: <input type="color" name="color_control"/>
+        <br><br>
+        <label for="cars">Coche propio:</label> <br><br>
+        <select id="coche" name="coche" size="5">
+          <option value="volvo">Volvo</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+          <option value="renault">Renault</option>
+          <option value="honda">Honda</option>
+          <option value="bmw">BMW</option>
+        </select>
+        <br><br>
+        <label for="archivo">Subir Fotos:</label>
+        <input type="file" id="archivo" name="archivo">
+        <br><br>
+        <label for="lang">Región:</label>
+        <select name="region" id="region">
+        <option value="europa">Europa</option>
+        <option value="america">América</option>
+        <option value="asia">Asia-Pacífico</option>
+        <option value="africa">Oriente Medio/África</option>
+        </select>
+        <br><br>
+        Contraseña: <input type="password">
+        <br><br>
+        <input type="submit" value="ENVIAR!"/>
+        </form>
+    
+
+</body>
+</html>
