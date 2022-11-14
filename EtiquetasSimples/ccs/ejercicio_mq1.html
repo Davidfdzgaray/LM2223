@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Querry</title>
+
+    <style>
+    div {
+        display: none; /*oculta divs*/
+        height:800px;
+        text-align: center;
+        vertical-align:middle;
+        line-height:800px;
+    }
+    
+    @media screen and (min-width:0px) and (max-width: 479px) {
+    body {
+    background-color: blue;
+    color: white;
+    }
+    .movil{
+        display: block;/*muestra divs*/
+    }
+    }   
+
+    @media screen and (min-width: 480px) and (max-width:768px) {
+    body {
+    background-color: palevioletred;
+    color: rgb(0, 0, 0);
+    }
+    .tablet{
+        display: block;
+    }
+    }
+
+    @media screen and (min-width:780px) and (max-width: 1279px) {
+    body {
+    background-color: green;
+    color: white;
+    }
+    .portatil{
+        display: block;
+    }
+    }
+
+    @media screen and (min-width:1280px) {
+    body {
+    background-color: yellow;
+    color: black;
+    }
+    .tv{
+        display: block;
+    }
+    } 
+    </style>
+</head>
+<body>
+
+    <div class="movil">Movil chico</div>
+    <div class="tablet">Tablet</div>
+    <div class="portatil">Portátil</div>
+    <div class="tv">TV</div>
+    
+</body>
+</html>
