@@ -7,68 +7,65 @@
     <title>Menú Lateral</title>
 
     <style>
-    .conjunto {overflow: auto;}
+        .conjunto {overflow: auto;}
 
-    .texto {margin-left: 4px;}
+        .texto {margin-left: 4px;}
 
-    .barra {
-        float: right;
-        width: 500px;
-    }
-
-    .ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    li {
-        background: #CDF0F6;
-        border: 1px solid #d4d4d4;
-        border-radius: 4px;
-        list-style-type: none;
-        margin: 4px;
-        padding: 2px;
-    }
-
-    li:hover{
-        background-color: aquamarine;
-    }
-
-    a:hover{
-        color:#fb04ff;
-    }
-
-    @media screen and (min-width: 480px) and (max-width:768px) {
-        .leftsidebar {width: 200px; float: left;}
-        .main {margin-top: 180px;}
-    }
-
-    @media print {
         .barra {
-        display:none;}
-        .texto {
-        color: red;}
-    }
-    </style>
-    </head>
-    <body>
+            float: right;
+            width: 500px;
+        }
 
-    <div class="conjunto">
-    <div class="barra">
-        <ul class="ul">
-            <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries2" target="_blank">Ejemplo 1</a></li>
-            <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries2" target="_blank">Ejemplo 2</a></li>
-            <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries2" target="_blank">Ejemplo 3</a></li>
-            <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries2" target="_blank">Ejemplo 4</a></li>
-            <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries2" target="_blank">Ejemplo 5</a></li>
-        </ul>
-    </div>
-    
-    <div class="main">
-        <h1>Redimensiona la pantalla para ver los cambios</h1>
-        <p>Este ejemplo muestra un menú que flotará a la derecha de la página si la ventana tiene 480 píxeles de ancho o más. Si la ventana tiene menos de 480 píxeles, el menú estará por encima del contenido.</p>
-    </div>
-    </div>
-        
+        .ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            background: #CDF0F6;
+            border: 1px solid #d4d4d4;
+            border-radius: 4px;
+            list-style-type: none;
+            margin: 4px;
+            padding: 2px;
+        }
+
+        li:hover{
+            background-color: aquamarine;
+        }
+
+        a:hover{
+            color:#fb04ff;
+        }
+
+        @media screen and (min-width: 480px) and (max-width:768px) {
+            .leftsidebar {width: 200px; float: left;}
+            .main {margin-top: 180px;}
+        }
+
+        @media print {
+            .barra {
+            display:none;}
+            .texto {
+            color: red;}
+        }
+    </style>
+</head>
+    <body>
+        <div class="conjunto">
+            <div class="barra">
+                <ul class="ul">
+                    <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries2" target="_blank">Ejemplo 1</a></li>
+                    <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries2" target="_blank">Ejemplo 2</a></li>
+                    <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries2" target="_blank">Ejemplo 3</a></li>
+                    <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries2" target="_blank">Ejemplo 4</a></li>
+                    <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries2" target="_blank">Ejemplo 5</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <h1>Redimensiona la pantalla para ver los cambios</h1>
+                <p>Este ejemplo muestra un menú que flotará a la derecha de la página si la ventana tiene 480 píxeles de ancho o más. Si la ventana tiene menos de 480 píxeles, el menú estará por encima del contenido.</p>
+            </div>
+        </div>
     </body>
 </html>
