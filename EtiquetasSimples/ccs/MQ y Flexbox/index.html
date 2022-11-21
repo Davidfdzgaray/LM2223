@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Imágenes</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        html,body {
+          margin: 0;
+          padding: 0;
+        }
+        
+        .cabecera {
+            text-align: center;
+        }
+        
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 4px;
+        }
+        
+        .column {
+          flex: 25%;
+          max-width: 25%;
+          padding: 0 4px;
+        }
+        
+        .column img {
+          margin-top: 8px;
+          vertical-align: middle;
+        }
+        
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media (max-width: 800px) {
+          .column {
+            flex: 50%;
+            max-width: 50%;
+          }
+        }
+        
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+          .column {
+            flex: 100%;
+            max-width: 100%;
+          }
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <body>
+        <div class="cabecera">
+          <h1>Banco de Imágenes del Concesionario</h1>
+          <h3>Reajusta la pantalla para ver los cambios</h3>
+        </div>
+        
+        <div class="row"> 
+          <div class="column">
+            <img src="images/19756540198_fa98df4ab6_o.jpg">
+            <img src="images/2795366589_4ba841d9c1_w.jpg">
+            <img src="images/5792513411_254085f9b9_w.jpg">
+          </div>
+          
+          <div class="column">
+            <img src="images/6778247541_dca1c34a6e_k.jpg">
+            <img src="images/6778311453_817c70795d_c.jpg">
+            <img src="images/6778334983_d95401d61e_c.jpg">
+            <img src="images/6778339609_fef2c3e639_k.jpg">
+            <img src="images/8759321536_8cbe3779e9_c.jpg">
+          </div> 
+           
+          <div class="column">
+            <img src="images/2759771079_a29d921785_c.jpg">
+            <img src="images/2759779501_6f3a70cff4_w.jpg">
+            <img src="images/2760621750_25961e286d_c.jpg">
+            
+            <img src="images/6573897639_ded4085dfc_w.jpg">
+          </div>
+
+          <div class="column">
+            <img src="images/9821944294_90562ba0a9_w.jpg">
+            <img src="images/5706943335_41f8dd7e48_w.jpg">
+            <img src="images/6573898799_0984ae7b63_z.jpg">
+          </div>
+        </div>
+        
+    </body>
+</head>
+</html>
