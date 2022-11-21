@@ -45,7 +45,8 @@
 
             text-align:center;
             vertical-align:middle;
-            line-height:100px;//
+            line-height:100px; igual de los px de altura del div
+            //
             align-items: center; centrar letras en el medio del cuadro
 
             box-sizing: border-box; el div queda a tamaño real de px aunque aumentes el padding o border
@@ -63,10 +64,10 @@
             ---
             .flex-container {
             display: flex;
-            flex-wrap: nowrap/wrap/wrap-reverse; se pone más fino/se queda el tamaño original y se van moviendo hacia abajo/ igual al revés el orden
+            flex-wrap: nowrap/wrap/wrap-reverse; no salta de linea/se queda el tamaño original y se van moviendo hacia abajo/ igual al revés el orden
             flex-direction: column/row//-reverse;
             background-color: DodgerBlue;
-            justify-content: center/flex-start/flex-end/space-around/space-between;
+            justify-content: center/flex-start/flex-end/space-around/space-between/space-evenly;
             align-items: center/strech/baseline;
             }
 
@@ -92,6 +93,25 @@
             <div>7</div>
             <div>8</div>
             </div>
+            
             ---
+
+            html, body {
+                height:100vh; 
+                overflow: hidden; esconder de la pagina los scroll
+                margin: 0;
+                padding: 0; quitar margenes y espacios
+            }
+
+            div {
+                height: 100%;
+            }
+
+            hace que el div se ajuste a la altura completa de la ventana
+
+            ---
+
+            font-size: xx-small//large; tamaño letra formato preferible
+
         }
     
