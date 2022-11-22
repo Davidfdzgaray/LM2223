@@ -10,25 +10,39 @@
           box-sizing: border-box;
         }
         
-        html,body {
+        html {
           margin: 0;
           padding: 0;
+        }
+
+        body {
+          margin: 0;
+          padding: 0;
+          background: url(images/6368568243_6be59b9e36_k.jpg) no-repeat fixed bottom;
+          
         }
         
         .cabecera {
             text-align: center;
+            background-color: rgb(201, 201, 201);
+            opacity: 0.3;
+            z-index: 2;
+        }
+
+        h1 {
+          opacity: 1;
         }
         
-        .row {
+        .contenedor {
           display: flex;
           flex-wrap: wrap;
-          padding: 0 4px;
+          padding: 0 100px;
         }
         
-        .column {
+        .columnas {
           flex: 25%;
           max-width: 25%;
-          padding: 0 4px;
+          padding: 15px;
         }
         
         .column img {
@@ -63,33 +77,33 @@
           <h3>Reajusta la pantalla para ver los cambios</h3>
         </div>
         
-        <div class="row"> 
-          <div class="column">
-            <img src="images/19756540198_fa98df4ab6_o.jpg">
-            <img src="images/2795366589_4ba841d9c1_w.jpg">
-            <img src="images/5792513411_254085f9b9_w.jpg">
+        <div class="contenedor"> 
+          <div class="columnas">
+            <p><img src="images/19756540198_fa98df4ab6_o.jpg"></p>
+            <p><img src="images/2795366589_4ba841d9c1_w.jpg"></p>
+            <p><img src="images/5792513411_254085f9b9_w.jpg"></p>
           </div>
           
-          <div class="column">
-            <img src="images/6778247541_dca1c34a6e_k.jpg">
-            <img src="images/6778311453_817c70795d_c.jpg">
-            <img src="images/6778334983_d95401d61e_c.jpg">
-            <img src="images/6778339609_fef2c3e639_k.jpg">
-            <img src="images/8759321536_8cbe3779e9_c.jpg">
+          <div class="columnas">
+            <p><img src="images/6778247541_dca1c34a6e_k.jpg"></p>
+            <p><img src="images/6778311453_817c70795d_c.jpg"></p>
+            <p><img src="images/6778334983_d95401d61e_c.jpg"></p>
+            <p><img src="images/6778339609_fef2c3e639_k.jpg"></p>
+            <p><img src="images/8759321536_8cbe3779e9_c.jpg"></p>
           </div> 
            
-          <div class="column">
-            <img src="images/2759771079_a29d921785_c.jpg">
-            <img src="images/2759779501_6f3a70cff4_w.jpg">
-            <img src="images/2760621750_25961e286d_c.jpg">
+          <div class="columnas">
+            <p><img src="images/2759771079_a29d921785_c.jpg"></p>
+            <p><img src="images/2759779501_6f3a70cff4_w.jpg"></p>
+            <p><img src="images/2760621750_25961e286d_c.jpg"></p>
             
-            <img src="images/6573897639_ded4085dfc_w.jpg">
+            <p><img src="images/6573897639_ded4085dfc_w.jpg"></p>
           </div>
 
-          <div class="column">
-            <img src="images/9821944294_90562ba0a9_w.jpg">
-            <img src="images/5706943335_41f8dd7e48_w.jpg">
-            <img src="images/6573898799_0984ae7b63_z.jpg">
+          <div class="columnas">
+            <p><img src="images/9821944294_90562ba0a9_w.jpg"></p>
+            <p><img src="images/5706943335_41f8dd7e48_w.jpg"></p>
+            <p><img src="images/6573898799_0984ae7b63_z.jpg"></p>
           </div>
         </div>
         

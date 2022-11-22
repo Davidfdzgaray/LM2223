@@ -122,6 +122,10 @@
             * {
             box-sizing: border-box;
             } se aplica a todas las etiquetas
+
+            ---
+
+            padding: 0 100px; primer numero padding arriba abajo y segundo para los lados
         
 
         
