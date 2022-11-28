@@ -19,11 +19,12 @@
     border: 2px solid black;
     border-style: dashed;
     background-color: lightgrey;
-    padding: 10px;
+    padding: 15px;
     margin: 0 auto;
 
     display: grid;
-    grid-template-areas: "cabecera cabecera" "menu menu" "contenido banners" "pie pie";
+    grid-template-areas: "cabecera cabecera" "menu menu" "contenido banners" "pie pie"; 
+    grid-template-rows: 10% 20% auto 10%;
     }
 
     .caja{
@@ -33,31 +34,27 @@
         align-items: center;
         display: flex;
         justify-content: center;
+
     }
 
     .cabecera{
         grid-area: cabecera;
-        height: 50%;
         background-color: rgb(175, 255, 255);
     }
     .menu{
         grid-area: menu;
-        height: 70%;
         background-color: rgb(255, 254, 170);
     }
     .contenido{
         grid-area: contenido;
-        height: auto;
         background-color: brown;
     }
     .banners{
         grid-area: banners;
-        height: auto;
         background-color: rgb(1, 65, 1);
     }
     .pie{
         grid-area: pie;
-        height: 10%;
         background-color: rgb(168, 182, 245);
     }
 </style>
@@ -72,7 +69,7 @@
         </div>
         <div class="caja contenido">
             CONTENIDO
-            </div>
+        </div>
         <div class="caja banners">
             BANNERS
         </div>
