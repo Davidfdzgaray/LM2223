@@ -1,4 +1,6 @@
-
+/* 
+<link rel="stylesheet" href="reset.css">
+*/
         div{
 
             background-color: blueviolet;
@@ -47,7 +49,7 @@
             vertical-align:middle;
             line-height:100px; igual de los px de altura del div
             //
-            align-items: center; centrar letras en el medio del cuadro
+            align-items: center; centrar letras en el medio del cuadro / TIENE QUE TENER DISPLAAY:FLEX
 
             box-sizing: border-box; el div queda a tamaño real de px aunque aumentes el padding o border
 
