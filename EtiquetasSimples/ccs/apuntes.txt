@@ -141,6 +141,8 @@
             grid-column: 1/span 4; /*linea desde donde se expande la caja y espacios que se agranda (hacia derecha)*/
             grid-row: 1/span 2; /*linea desde donde se expande la caja y espacios que se agranda (hacia abajo)*/
 
+        grid-template-areas: "cabecera cabecera" "menu menu" "contenido banners" "pie pie"; /*ORDEN POR FILAS DEL DIV*/
+        grid-area: cabecera; /*IDENTIFICADORES*/
 
         
     

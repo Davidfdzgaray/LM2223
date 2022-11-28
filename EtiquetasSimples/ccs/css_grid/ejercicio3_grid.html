@@ -4,60 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio3_grid.css">
     <title>GRID</title>
 </head>
-<style>
-    body{
-    text-align: center;
-    background-color: lightgoldenrodyellow;
-    font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .contenedor{
-    width: 80%;
-    height: 84vh;
-    border: 2px solid black;
-    border-style: dashed;
-    background-color: lightgrey;
-    padding: 15px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-areas: "cabecera cabecera" "menu menu" "contenido banners" "pie pie"; 
-    grid-template-rows: 10% 20% auto 10%;
-    }
-
-    .caja{
-        border: 4px solid black;
-        text-align:center;
-        vertical-align:middle;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-
-    }
-
-    .cabecera{
-        grid-area: cabecera;
-        background-color: rgb(175, 255, 255);
-    }
-    .menu{
-        grid-area: menu;
-        background-color: rgb(255, 254, 170);
-    }
-    .contenido{
-        grid-area: contenido;
-        background-color: brown;
-    }
-    .banners{
-        grid-area: banners;
-        background-color: rgb(1, 65, 1);
-    }
-    .pie{
-        grid-area: pie;
-        background-color: rgb(168, 182, 245);
-    }
-</style>
 <body>
     <h1>.:CSS GRID LAYOUT:.</h1>
     <div class="contenedor">
