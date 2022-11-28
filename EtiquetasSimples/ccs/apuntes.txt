@@ -126,7 +126,19 @@
             ---
 
             padding: 0 100px; primer numero padding arriba abajo y segundo para los lados
-        
+
+            height: 80vh; /*80% del viewport*/
+
+            gap: 10px; para columna y filas
+            column-gap: ; espacio entre caja columna
+            row-gap: ; espacio entre caja fila 
+
+            display: grid;
+            grid-template-columns: 20% 20% 30% 30%; ancho de las cajas por columna
+            grid-template-rows: 40% 40% 20% 20%; largo de las cajas por fila
+            grid-column: 1/span 4; /*linea desde donde se expande la caja y espacios que se agranda (hacia derecha)*/
+            grid-row: 1/span 2; /*linea desde donde se expande la caja y espacios que se agranda (hacia abajo)*/
+
 
         
     
