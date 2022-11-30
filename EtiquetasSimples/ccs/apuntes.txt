@@ -129,7 +129,11 @@
 
             padding: 0 100px; primer numero padding arriba abajo y segundo para los lados
 
+            ---
+
             height: 80vh; /*80% del viewport*/
+            
+            ---
 
             gap: 10px; para columna y filas
             column-gap: ; espacio entre caja columna

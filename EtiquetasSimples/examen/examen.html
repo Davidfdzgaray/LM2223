@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="examen.css">
+    <title>EXAMEN</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+
+    html {
+          margin: 0;
+          padding: 0;
+        }
+
+    body{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: url("images_examen/bailey-zindel-NRQV-hBF10M-unsplash.jpg")  no-repeat top fixed;
+        background-size: cover;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /*------------------------------------------------*/
+
+    .contenedor{
+        width: 80%;
+        height: 84vh;
+        border: 2px solid black;
+        border-style: dashed;
+        background-color: lightgrey;
+        padding: 15px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-areas: "cabecera cabecera" "menu menu" "contenido banners" "pie pie"; /*ORDEN POR FILAS DEL DIV*/
+        grid-template-rows: 10% 20% auto 10%; /*ALTURA DE LAS CAJAS // SI FUERA ANCHURA SERIA COLUMNS*/
+    }
+
+    .caja{
+        border: 4px solid black;
+        text-align:center;
+        vertical-align:middle;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cabecera{
+        grid-area: cabecera; /*IDENTIFICADORES*/
+        background-color: rgb(255, 218, 175);
+    }
+    .menu{
+        grid-area: menu;
+        background-color: rgb(255, 254, 170);
+    }
+    .contenido{
+        grid-area: contenido;
+        background-color: rgb(78, 247, 168);
+    }
+    .banners{
+        grid-area: banners;
+        background-color: pink;
+    }
+    .pie{
+        grid-area: pie;
+        background-color: rgb(168, 182, 245);
+    }
+
+    /*---------------------FLEX---------------------------*/
+
+    .contenedor_flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .contenedor_flex > div {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    }
+
+    .flex1{
+    background-color: red;
+    } 
+    
+    .flex2{
+    background-color: pink;
+    } 
+
+    .flex3{
+    background-color: blue;
+    } 
+
+    .flex4{
+    background-color: green;
+    } 
+
+    .flex5{
+    background-color: yellow;
+    } 
+    
+    /*------------------MQ------------------------------*/
+
+    .contenedor_mq {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 100px;
+          background-color: aquamarine;
+        }
+        
+        .columna {
+          flex: 10%;
+          max-width: 10%;
+          padding: 15px;
+        }
+
+        @media screen and (min-width:0px) and (max-width: 479px) {
+            .columna {
+            flex: 25%;
+            max-width: 25%;
+          }
+        }   
+
+        @media screen and (min-width: 480px) and (max-width:768px) {
+            .columna {
+            flex: 50%;
+            max-width: 50%;
+          }
+        }
+
+        @media screen and (min-width:780px) and (max-width: 1279px) {
+            .columna {
+            flex: 75%;
+            max-width: 75%;
+          }
+        }
+
+        @media screen and (min-width:1280px) {
+            .columna {
+            flex: 100%;
+            max-width: 100%;
+          }
+        } 
+
+        @media print {
+            .columna {
+            display:none;}
+        }
+
+        /*------------------TABLES------------------------------*/
+
+        table{
+            padding: 20px;
+        }
+
+        th {
+            text-align: center;
+            color: white;
+            background-color: red;
+        }
+
+        td{
+            text-align: left;
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>EXAMEN</h1>
+    <div class="contenedor">
+        <div class="caja cabecera">
+            CABECERA
+        </div>
+        <div class="caja menu">
+            MENÚ
+        </div>
+        <div class="caja contenido">
+            CONTENIDO
+        </div>
+        <div class="caja banners">
+            BANNERS
+        </div>
+        <div class="caja pie">
+            PIE DE PÁGINA
+        </div>
+    </div>
+    <div class="contenedor_mq">
+        <div class="columna">
+
+        </div>
+        <div class="columna">
+            
+        </div>
+        <div class="columna">
+            
+        </div>
+        <div class="columna">
+            
+        </div>
+    </div>  
+    <table>
+        <tr>
+        <th colspan="3">Luar La L</th>
+        </tr>
+
+        <tr>
+        <th colspan="3">Información personal</th>
+        </tr>
+
+        <tr>
+        <td>Nombre completo</td>
+        <td colspan="2">Raúl Armando del Valle Robles</td>
+        </tr>
+
+        <tr>
+        <td>Nombre de nacimiento</td>
+        <td colspan="2"> Raúl Armando del Valle</td>
+        </tr>
+
+        <tr>
+        <td>Nacimiento</td>
+        <td colspan="2">29 de mayo de 2000 (22 años)<br>Puerto Rico</td>
+        </tr>
+
+        <tr>
+        <th colspan="3">Características físicas</th>
+        </tr>
+
+        <tr>
+        <th colspan="3">Familia</th>
+        </tr>
+
+        <tr>
+        <td>Padres</td>
+        <td colspan="2">
+        Brenda Robles <br>
+        Raúl Armando del Valle</td>
+        </tr>
+
+        <tr>
+        <th colspan="3">Información profesional</th>
+        </tr>
+
+        <tr>
+        <td>Ocupación</td>
+        <td colspan="2">Rapero y compositor</td>
+        </tr>
+
+        <tr>
+        <td>Años activo</td>
+        <td colspan="2">2018 - Presente</td>
+        </tr>
+
+        <tr>
+        <td>Seudónimo</td>
+        <td colspan="2"><i>Luar La L</i></td>
+        </tr>
+
+        <tr>
+        <td>Géneros</td>
+        <td colspan="2">Reguetón, Rap, Trap latino</td>
+        </tr>
+
+        <tr>
+        <td>Discográfica</td>
+        <td colspan="2"> White Lion Records <small> (desde 2020)</small></td>
+        </tr>
+    </table>
+    <div class="contenedor_flex">
+        <div class="flex1">1</div>
+        <div class="flex2">2</div>
+        <div class="flex3">3</div>
+        <div class="flex4">4</div>
+        <div class="flex5">5</div>
+    </div>
+</body>
+</html>
