@@ -7,6 +7,9 @@
     <title>EJERCICIO 1</title>
 
     <style>
+        *{
+            box-sizing: border-box;
+        }
         body{
             background: url("images/bg.jpg")  no-repeat center fixed;
             background-size: cover;
@@ -87,9 +90,41 @@
         a:active{
             color: #ebcd7c;
         }
+        @media screen and (max-width: 600px) {
+            .mq {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            header {
+                order: 1;
+            }
+            .texto {
+                order: 2;
+            }
+            .lateral {
+                order: 3;
+                width: auto;
+                height: auto;
+            }
+            .contenedor_nav {
+                order: 4;
+            }
+            .navegacion {
+                width: auto;
+            }
+            footer {
+                order: 5;
+            }
+            hr {
+                display:none;
+            }
+        } 
     </style>
 </head>
 <body>
+    <div class="mq">
     <header>
         <h1>ASIR: Lenguaje de Marcas</h1>
     </header>
@@ -112,9 +147,9 @@
         <p>Texto adicional a la pšgina web. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ex eius illo alias id voluptatum tempore vel minus esse minima accusamus, officia veritatis quasi, eum ut optio quae quod architecto? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, quam repudiandae minima praesentium beatae ut expedita neque assumenda ratione animi facilis dolorem tenetur vero reprehenderit nostrum iure distinctio atque quod.</p>
     </div>   
 <hr>
-
     <footer>
         LMSGI 2022 IES Antonio Machado <a href="mailto:joseluisnunez@iesmachado.org"> Profesor Jose Luis Núñez </a>
     </footer>
+</div>
 </body>
 </html>
