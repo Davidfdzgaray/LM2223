@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ej2_propio.css">
+    <title>EJERCICIO 2</title>
+    <style>
+        body{
+            font-family: 'Open Sans', sans-serif;
+            background-color: lightgray;
+            font-size: 24px;
+            font-variant: small-caps;
+            font-weight: bold;
+        }
+        h1{
+            margin: 3% 10%;
+        }
+        .contenedor {
+            background-color: white;
+            border: 1px solid black; 
+            margin: 0% 10%;
+        }
+        p {
+            margin-left: 10px;
+        }
+
+        textarea{
+margin: 0 auto;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crea tu personaje</h1>
+    <div class="contenedor">
+        <form action="post">
+        <p>Por favor rellena el siguiente formulario:</p>
+        <p>Nombre: <input type="text"/></p>
+        <p>¿Tienes poderes especiales? <input type="checkbox"/></p>
+        <p>Color Favorito: <input type="color" name="color_control"/></p>
+        <p>Descripción de mismo: <input type="text"/></p>
+        <p>Email de su tribu: <input type="email"/></p>
+        <p>Nacimiento: <input type="date" name="nacimiento"/></p>
+        <p>Bando: 
+            <select id="bando" name="bando" size="2">
+            <option value="bueno">Buenos</option>
+            <option value="malvado">Malvados</option>
+          </select>
+        </p>
+        <p>Historia del personaje:</p>
+        <textarea name="historia" rows="10" cols="50"></textarea>
+        </form>
+    </div>
+</body>
+</html>
