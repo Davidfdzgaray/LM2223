@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicitación navideña</title>
+    <style>
+body{
+    background-color: rgb(160, 3, 3);
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+    margin: 3% 10%;
+    text-align: center;
+    color: white;
+}
+
+.contenedor {
+    background-color: white;
+    color: black; 
+    margin: 0% 10%;
+    height: auto;
+    width: auto;
+    
+}
+
+.contenedor_grid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    row-gap: 1em;
+    column-gap: 20%;
+}
+
+h2 {
+    margin-top: auto;
+    margin-left: 10px;
+    padding: 2%;
+    text-align: center;
+    color: rgb(160, 3, 3);
+}
+
+.item{
+    margin-left: 10px;
+}
+
+.item-10{
+    grid-column: 1/span 2;
+}
+
+.item-11{
+    grid-column: 1/span 2;
+    
+}
+
+input[type="text"]{
+    height: 25px;
+    width: 70%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+input[type="email"]{
+    height: 25px;
+    width: 70%;
+}
+
+input[type="date"]{
+    height: 30px;
+    width: 71%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: bold;
+    height: 35px;
+    width: 82%;
+    margin-bottom: 10px;
+    background-color: rgb(160, 3, 3);
+    color: white;
+}
+
+select{
+    height: 30px;
+    width: 71%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+textarea {
+    width: 82%;
+    height: 350px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+footer {
+    color: rgb(160, 3, 3);
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 2%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 60px;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    cursor: help;
+    font-weight:  bolder;
+    color: rgb(160, 3, 3);
+}
+    </style>
+</head>
+<body>
+    <h1>¡FELIZ NAVIDAD!</h1>
+    <div class="contenedor">
+        <form action="" method="post">
+            <h2>FELICITACIÓN NAVIDEÑA</h2>
+            <div class="contenedor_grid">
+                <div class="item item-1"><label>Nombre: </label></div>
+                <div class="item item-2"><input type="text" placeholder="Escribe tu nombre"/></div>
+                <div class="item item-3"><label>Nombre del destinatario: </label></div>
+                <div class="item item-4"><input type="text" placeholder="Escribe el nombre del destinatario"/></div>
+                <div class="item item-5"><label>Email del destinatario: </label></div>
+                <div class="item item-6"><input type="email"/></div>
+                <div class="item item-7"><label>Día actual: </label></div>
+                <div class="item item-8"><input type="date" name="dia"/></div>
+                <div class="item item-9"><label>Escriba su mensaje:</label></div>
+                <div class="item item-10"><textarea name="mensaje" rows="10" cols="50" placeholder="Escriba el mensaje para el destinatario..."></textarea></div>
+                <div class="item item-11"><input type="submit" value="Enviar" id="mensaje" name="mensaje"/></div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>Formulario creado por <a href="mailto:davidfernandez02@iesamachado.org" target="_blank">David Fernández Garay</a>. Para más información pulse para escribir un correo electrónico</p>
+    </footer>
+</body>
+</html>
