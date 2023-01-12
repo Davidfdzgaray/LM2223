@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 7</title>
+    <style>
+
+        .contenedor {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #rojo {
+            background-color: red;
+            height: 150px;
+            width: 150px;
+            border-radius: 250px;
+            margin: 10px;
+
+        }
+
+        #verde {
+            background-color: green;
+            height: 150px;
+            width: 150px;
+            border-radius: 250px;
+            margin: 10px;
+        }
+
+        #azul {
+            background-color: blue;
+            height: 150px;
+            width: 150px;
+            border-radius: 250px;
+            margin: 10px;
+        }
+
+        button{
+            margin: 55px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Utilidades de JavaScript</h1>
+
+    <div class="contenedor">
+
+    <div id="rojo"> </div>
+
+  
+
+    <div id="verde"> </div>
+
+    
+
+    <div id="azul"> </div>
+
+   
+
+    </div>
+
+    <div class="contenedor">
+
+        <button type="button"
+        onclick='document.getElementsById("rojo").style.display="none"'>Ocultar</button>
+
+        <button type="button"
+        onclick='document.getElementsById("verde").style.display="none"'>Ocultar</button>
+
+        <button type="button"
+        onclick='document.getElementsById("azul").style.display="none"'>Ocultar</button>
+
+    </div>
+
+</body>
+</html>
