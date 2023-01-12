@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js7.js"></script>
     <title>Javascript 7</title>
     <style>
 
         .contenedor {
             display: flex;
-            flex-direction: row;
         }
 
         #rojo {
@@ -18,7 +18,7 @@
             width: 150px;
             border-radius: 250px;
             margin: 10px;
-
+            display: inline-block;
         }
 
         #verde {
@@ -27,6 +27,7 @@
             width: 150px;
             border-radius: 250px;
             margin: 10px;
+            display: inline-block;
         }
 
         #azul {
@@ -35,10 +36,11 @@
             width: 150px;
             border-radius: 250px;
             margin: 10px;
+            display: inline-block;
         }
 
         button{
-            margin: 55px;
+            margin: 40px;
         }
 
     </style>
@@ -46,32 +48,23 @@
 <body>
     <h1>Utilidades de JavaScript</h1>
 
-    <div class="contenedor">
+    <div id="contenedor">
 
     <div id="rojo"> </div>
 
-  
-
     <div id="verde"> </div>
-
     
-
     <div id="azul"> </div>
-
-   
 
     </div>
 
     <div class="contenedor">
 
-        <button type="button"
-        onclick='document.getElementsById("rojo").style.display="none"'>Ocultar</button>
+        <button type="button" onclick="oc_rojo()">Ocultar Rojo</button>
 
-        <button type="button"
-        onclick='document.getElementsById("verde").style.display="none"'>Ocultar</button>
+        <button type="button" onclick="oc_verde()">Ocultar Verde</button>
 
-        <button type="button"
-        onclick='document.getElementsById("azul").style.display="none"'>Ocultar</button>
+        <button type="button" onclick="oc_azul()">Ocultar Azul</button>
 
     </div>
 
