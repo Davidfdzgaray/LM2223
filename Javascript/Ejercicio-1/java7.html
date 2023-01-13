@@ -8,10 +8,6 @@
     <title>Javascript 7</title>
     <style>
 
-        .contenedor {
-            display: flex;
-        }
-
         #rojo {
             background-color: red;
             height: 150px;
@@ -46,9 +42,8 @@
     </style>
 </head>
 <body>
-    <h1>Utilidades de JavaScript</h1>
 
-    <div id="contenedor">
+    <h1>Utilidades de JavaScript</h1>
 
     <div id="rojo"> </div>
 
@@ -56,17 +51,13 @@
     
     <div id="azul"> </div>
 
-    </div>
+ <br>
 
-    <div class="contenedor">
+    <button type="button" onclick="ocultar('rojo')">Ocultar Rojo</button>
 
-        <button type="button" onclick="oc_rojo()">Ocultar Rojo</button>
+    <button type="button" onclick="ocultar('verde')">Ocultar Verde</button>
 
-        <button type="button" onclick="oc_verde()">Ocultar Verde</button>
-
-        <button type="button" onclick="oc_azul()">Ocultar Azul</button>
-
-    </div>
-
+    <button type="button" onclick="ocultar('azul')">Ocultar Azul</button>
+    
 </body>
 </html>

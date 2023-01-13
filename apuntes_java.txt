@@ -1,3 +1,5 @@
+    <script src="js7.js"></script>
+
 <script>
 <p id="parrafo"></p>
 <script>
