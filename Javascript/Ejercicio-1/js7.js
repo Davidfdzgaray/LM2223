@@ -1,3 +1,3 @@
-function ocultar_rojo() {
-    document.getElementById().style.backgroundColor= "white";
+function ocultar(id) {
+    document.getElementById(id).style.backgroundColor= "white";
 }
