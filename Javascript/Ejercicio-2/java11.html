@@ -7,6 +7,21 @@
     <title>Javascript 11</title>
 </head>
 <body>
+
+    <p>Variable Local</p>
     
+    <button onclick="prueba()">Prueba</button>
+    
+    <p id="parrafo"></p>
+    
+    <script>
+        alert("Fuera de la función la variable a no existe y produce un error en esta línea" + a);
+        function prueba() {
+        var a;
+        a = 44;
+        document.getElementById("parrafo").innerHTML = "Dentro de la función la variable a vale " + a;
+        }
+    </script>
+
 </body>
 </html>

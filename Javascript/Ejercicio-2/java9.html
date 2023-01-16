@@ -8,5 +8,19 @@
 </head>
 <body>
     
+    <h1>Escribe tu nombre:</h1>
+    
+    <input id="nombre" type="textbox">
+    
+    <button onclick="saludo()">Saludar</button>
+    
+    <script>
+        function saludo() {
+        var cadena;
+        cadena = document.getElementById("nombre").value;
+        alert('Bienvenido '+cadena);
+    }
+    </script>
+
 </body>
 </html>

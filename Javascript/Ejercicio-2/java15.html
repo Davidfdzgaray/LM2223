@@ -8,5 +8,33 @@
 </head>
 <body>
     
+    <h1>Adivina el número entre 1 y 10:</h1>
+    
+    <input id="numero" type="textbox" placeholder="Escribe un número:">
+    
+    <button id="boton" onclick="comprobar()">Probar Suerte!</button>
+    
+    <p id="resultado"></p>
+    
+    <script>
+    var numero=8;
+    
+    function comprobar() {
+    var entrada=document.getElementById("numero").value;
+    
+    if (entrada>numero)
+    {
+    document.getElementById("resultado").innerHTML = "Lo siento, el número era menor...";
+    }
+    else if(entrada==numero)
+    {
+    document.getElementById("resultado").innerHTML = "¡Acertaste!";
+    }
+    else {
+    document.getElementById("resultado").innerHTML = "Lo sentimos, el número era mayor...";
+    }
+    }
+    </script>
+
 </body>
 </html>
