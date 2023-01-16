@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ext_habitaciones.js"></script>
     <title>Javascript Habitaciones</title>
+
+    <style>
+        h3{
+            width: 38%;
+        }
+        button{
+            width: 38%;
+            margin-top: 5px;
+        }
+        #adultos{
+            width: 15%;
+        }
+        #niños{
+            width: 15%;
+        }
+    </style>
 </head>
 <body>
+
+    <h3>Rellene los siguientes campos para comprobar las habitaciones disponibles:</h3>
+
+    Adultos:
+    <input id="adultos" type="textbox" placeholder="Introduzca el numero de adultos...">
+
+    Niños:
+    <input id="niños" type="textbox" placeholder="Introduzca el numero de niños..."><br>
+
+    <button onclick="consulta()">CONSULTAR</button>
     
 </body>
 </html>
