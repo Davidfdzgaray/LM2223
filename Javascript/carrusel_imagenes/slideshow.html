@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slideshow.css">
+    <script src="slideshow.js"></script>
+
+    <title>Slideshow Javascript</title>
+</head>
+<body>
+    <!-- Contenedor Slideshow -->
+  <div class="contenedor_slideshow">
+
+    <!-- Imágenes de ancho 100% con su número y subtituloso de subtítulos -->
+    <div class="imagenes animacion">
+      <div class="numeros">1 / 3</div>
+      <img src="images/img1.PNG">
+      <div class="subtitulos">Transformación 1</div>
+    </div>
+  
+    <div class="imagenes animacion">
+      <div class="numeros">2 / 3</div>
+      <img src="images/img2.PNG">
+      <div class="subtitulos">Transformación 2</div>
+    </div>
+  
+    <div class="imagenes animacion">
+      <div class="numeros">3 / 3</div>
+      <img src="images/img3.PNG">
+      <div class="subtitulos">Transformación 3</div>
+    </div>
+  
+    <!-- Botones para avanzar o retroceder -->
+    <a class="retroceder" onclick="boton_imagen(-1)">&#10094;</a>
+    <a class="avanzar" onclick="boton_imagen(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- Los puntos/círculos -->
+  <div class="puntos">
+    <span class="punto" onclick="imagen_actual(1)"></span>
+    <span class="punto" onclick="imagen_actual(2)"></span>
+    <span class="punto" onclick="imagen_actual(3)"></span>
+  </div>
+</body>
+</html>
