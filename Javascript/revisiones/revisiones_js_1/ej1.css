@@ -1,0 +1,34 @@
+
+
+        #rojo {
+            background-color: red;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        #verde {
+            background-color: green;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        #azul {
+            background-color: blue;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 170px;
+        }
+

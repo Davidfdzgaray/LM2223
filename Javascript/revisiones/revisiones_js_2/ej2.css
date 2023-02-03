@@ -1,0 +1,22 @@
+button{
+    width: 14%;
+    margin-top: 20px;
+}
+
+div {
+    margin-top: 10px;
+    border: 1px solid black;
+    height: 100px;
+    width: 700px;
+    font-size: 20px;
+}
+
+img {
+    width: auto;
+    height: 90px;
+}
+
+.basura{
+    
+}
+    
