@@ -16,7 +16,8 @@ img {
     height: 90px;
 }
 
-.basura{
-    
+.basura {
+   float: right; 
+   cursor: pointer;
 }
     
