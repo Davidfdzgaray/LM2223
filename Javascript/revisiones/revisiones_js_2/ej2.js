@@ -2,9 +2,9 @@
 var mensajes = ["Mi primer tweet","LM es la mejor clase","Por fin Viernes!","Último tweet"];      
 
 function imprimir() {
+    document.getElementById("contenedor").innerHTML = '';
     for (var i=0;i<=mensajes.length-1;i++) {
-        document.write("<div>"+"<img src='images/pajaro.png'>"+mensajes[i]+"<img src='images/basura.png' onclick='borrar("+i+")' class='basura'>"+"</div>");
-        
+        document.getElementById("contenedor").innerHTML += ("<div>"+"<img src='images/pajaro.png'>"+mensajes[i]+"<img src='images/basura.png' onclick='borrar("+i+")' class='basura'>"+"</div>"+"<br>");
     }
 }
 
@@ -23,7 +23,8 @@ function enviar() {
 }
 
 function ordenar() {
-
+    mensajes.sort();
+    imprimir();
 }
 
 

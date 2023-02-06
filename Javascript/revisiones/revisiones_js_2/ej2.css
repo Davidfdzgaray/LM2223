@@ -20,4 +20,10 @@ img {
    float: right; 
    cursor: pointer;
 }
+
+#contenedor {
+    width: auto;
+    height: auto;
+    border: none;
+}
     
