@@ -10,8 +10,8 @@
 </head>
 <body>
 <h3>RELLENE EL SIGUIENTE FORMULARIO:</h3>
-<form action=".php" method="post">
-    Nombre <input id="nombre" type="text" placeholder="Introduzca su Nombre" required="required"><br>
+<form action="" method="get">
+    Nombre<input id="nombre" type="text" placeholder="Introduzca su Nombre" required="required"><br>
     
     Apellido<input id="apellido" type="text" placeholder="Introduzca su Apellido" required="required"><br>
 
@@ -21,13 +21,13 @@
 
     Ciudad<input id="ciudad" type="text" placeholder="Introduzca su Ciudad"><br>
 
-    Teléfono (+34)<input id="tlf" type="number" placeholder="Introduzca su Teléfono" minlength="9" maxlength="9"><br>
+    Teléfono (+34)<input id="tlf" type="number" placeholder="Introduzca su Teléfono" minlength="9" maxlength="9" required="required"><br>
 
-    DNI (validado por Javascript)<input id="dni" type="text" placeholder="Introduzca su DNI" minlength="9" maxlength="9" required="required"><br>
+    DNI<input id="dni" type="text" placeholder="Introduzca su DNI" minlength="9" maxlength="9" required="required"><br>
 
     PIN (8 dígitos)<input id="pin" type="number" placeholder="Introduzca su PIN" minlength="8" maxlength="8" required="required"><br>
 
-    Repite el PIN(validar con java)<input id="pin2" type="number" placeholder="Repita el PIN" minlength="8" maxlength="8" required="required"><br>
+    Repite el PIN<input id="pin2" type="number" placeholder="Repita el PIN" minlength="8" maxlength="8" required="required"><br>
 
     <button onclick="enviar()">ENVIAR</button>
 </form> 
