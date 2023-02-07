@@ -1,0 +1,77 @@
+.contenedor {
+    width: 100%;
+    height: 98vh;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%; 
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+#azul{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    
+    cursor: pointer;
+}
+#rojo{
+    background-color: RED;
+    width: 150px;
+    height: 150px;
+    
+    cursor: pointer;
+}
+#verde{
+    background-color: green;
+    width: 70px;
+    height: 70px;
+    
+    cursor: pointer;
+}
+#rosa{
+    background-color: pink;
+    width: 50px;
+    height: 50px;
+    
+    cursor: pointer;
+}
+#amarillo{
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+    
+    cursor: pointer;
+}
+#naranja{
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    
+    cursor: pointer;
+}
+#marron{
+    background-color: brown;
+    width: 200px;
+    height: 200px;
+    
+    cursor: pointer;
+}
+#negro{
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    
+    cursor: pointer;
+}
+#morado{
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    
+    cursor: pointer;
+}
+#cian{
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+    
+    cursor: pointer;
+}
