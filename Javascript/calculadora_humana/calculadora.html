@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="calculadora.js"></script>
+    <link rel="stylesheet" href="calculadora.css">
+    <title>CALCULADORA</title>
+</head>
+<body>
+    
+    
+    <h1>Calculadora Humana</h1>
+    <h3>Responde a la siguientes cuestiones:</h3>
+    <div class="contenedor">
+        <div id="pregunta_1">
+           <h4>2 x 5</h4>
+           <form action="" method="get">
+                <input type="radio" id="correcto_1" value="1">
+                <label>10</label><br>
+
+                <input type="radio" id="error_1" value="2">
+                <label for="2">20</label><br>
+
+                <input type="radio" id="error_11" value="3">
+                <label for="3">30</label><br>
+           </form>
+        </div>
+        
+        <div id="pregunta_2">
+            <h4>40 : 2</h4>
+            <form action="" method="get">
+                <input type="radio" id="error_2" value="1">
+                <label>10</label><br>
+
+                <input type="radio" id="correcto_2" value="2">
+                <label for="2">20</label><br>
+                
+                <input type="radio" id="error_22" value="3">
+                <label for="3">30</label><br>
+            </form>
+        </div>
+        
+        <div id="pregunta_3">
+            <h4>10 + 20</h4>
+            <form action="" method="get">
+                 <input type="radio" id="error_3" value="1">
+                 <label>10</label><br>
+ 
+                 <input type="radio" id="error_33" value="2">
+                 <label for="2">20</label><br>
+                 
+                 <input type="radio" id="correcto_3" value="3">
+                 <label for="3">30</label><br>
+            </form>
+        </div>
+
+        <div id="pregunta_4">
+            <h4>10 x 2</h4>
+            <form action="" method="get">
+                <input type="radio" id="error_4" value="1">
+                <label>10</label><br>
+
+                <input type="radio" id="correcto_4" value="2">
+                <label for="2">20</label><br>
+                
+                <input type="radio" id="error_44" value="3">
+                <label for="3">30</label><br>
+           </form>
+        </div>
+
+        <button>
+            ENVIAR RESPUESTA
+        </button>
+    </div>
+    
+    <div id="resultado_final"></div>
+    
+    <script>
+        iniciar();
+        cuestiones();    
+    </script>
+</body>
+</html>

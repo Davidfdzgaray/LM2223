@@ -34,3 +34,11 @@ texto += "<li>" + frutas[i] + "</li>";
 for (inicio de variable, condicion, suma) {
     
 }
+
+/*INDETERMINACION*/
+insNaN(variable)/*para usarlo con if para ver si el numero es indeterminado*/
+
+/*INFINITO*/
+isFinite(variable)
+
+

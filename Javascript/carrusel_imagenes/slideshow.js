@@ -1,4 +1,4 @@
-let numero_imagen = 1;
+var numero_imagen = 1;
 mostrar_imagenes(numero_imagen);
 
 // botones avanzar/retroceder
@@ -15,8 +15,12 @@ function mostrar_imagenes(n) {
   let i;
   let imagenes = document.getElementsByClassName("imagenes");
   let punto = document.getElementsByClassName("punto");
-  if (n > imagenes.length) {numero_imagen = 1}
-  if (n < 1) {numero_imagen = imagenes.length}
+  if (n > imagenes.length) {
+    numero_imagen = 1
+  }
+  if (n < 1) {
+    numero_imagen = imagenes.length
+  }
   for (i = 0; i < imagenes.length; i++) {
     imagenes[i].style.display = "none";
   }
