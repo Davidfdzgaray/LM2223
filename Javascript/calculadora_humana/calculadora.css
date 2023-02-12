@@ -2,6 +2,7 @@
     width: 100%;
     height: 300px;
     border: 1px solid black;
+    padding: 10px;
 }
 #pregunta_1 {
     display: none;
@@ -14,4 +15,8 @@
 }
 #pregunta_4 {
     display: none;
+}
+
+button {
+    margin-top: 10px;
 }
