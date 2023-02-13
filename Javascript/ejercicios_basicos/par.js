@@ -1,7 +1,7 @@
 function comprobar() {
     var numero = document.getElementById("numero").value; 
-    numero = numero%2;
-    if (numero==0) {
+    resto = numero%2;
+    if (resto==0) {
         document.getElementById("solucion").innerHTML="EL NUMERO ES PAR";
     }
     else {
