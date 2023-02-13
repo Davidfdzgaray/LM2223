@@ -69,5 +69,4 @@ function enviar() {
         document.getElementById("boton").style.display = "none";
         document.getElementById("resultado_final").innerHTML = "HAS ACERTADO " + correctas + " PREGUNTAS DE 4";
     }
-
 }
