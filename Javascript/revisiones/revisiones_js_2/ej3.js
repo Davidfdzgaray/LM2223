@@ -52,7 +52,7 @@ function nombreusuario() {
 
     nombre = nombre.substr(0,2);
     apellido = apellido.substr(0,2);
-    telefono = telefono.substr(-3,3);
+    telefono = telefono.substr(-3,3);//sacar caracteres indicados
 
     usuario = nombre+apellido+telefono;
 }
@@ -67,7 +67,7 @@ function enviar() {
     }
     else {
         if (soluciondni===false && solucionpin===false) {
-        alert("Error, el DNI y el PIN son incorrectos. Vuelva a intentarlo.")
+            alert("Error, el DNI y el PIN son incorrectos. Vuelva a intentarlo.")
         }
         else if (soluciondni===true && solucionpin===false) {
             alert("Error, el PIN es incorrecto. Vuelva a intentarlo.")

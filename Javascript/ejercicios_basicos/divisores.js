@@ -1,5 +1,5 @@
 function comprobar() {
-    var numero = document.getElementById("numero").value; 
+    var numero = parseFloat(document.getElementById("numero").value); //para que no haya desbordamiento
     var i=1;
     var divisores = [];
 
@@ -9,6 +9,5 @@ function comprobar() {
         }
         i++;
     }
-    
     document.getElementById("solucion").innerHTML = divisores; 
 }
