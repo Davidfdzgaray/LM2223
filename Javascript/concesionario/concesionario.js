@@ -1,16 +1,8 @@
-/*var imagenes = [0,1,2,3,4,5];
-imagenes[0].src = './images/banner0.png';
-imagenes[1].src = './images/banner1.png';
-imagenes[2].src = './images/banner2.png';
-imagenes[3].src = './images/banner3.png';
-imagenes[4].src = './images/banner4.png';
-imagenes[5].src = './images/banner5.png';*/
+var aleatorio =  Math.random(); 
+aleatorio = aleatorio * 5 + 1;
+aleatorio = Math.trunc(aleatorio);
 
-    var aleatorio =  Math.random(); 
-    aleatorio = aleatorio * 5 + 1;
-    aleatorio = Math.trunc(aleatorio);
-
-    var contador = aleatorio;
+var contador = aleatorio;
 
 function banners() {
 
