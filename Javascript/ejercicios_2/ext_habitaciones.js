@@ -1,41 +1,59 @@
 function consulta() {
     var adultos = document.getElementById("adultos").value;
-    var niños = document.getElementById("niños").value;
+    var ninos = document.getElementById("ninos").value;
+    var i=1;
+    var s=1;
+    var divisores_adul = [];
+    var divisores_nin = [];
 
-    if (adultos=="" || niños=="") {
+    while (i<=adultos) {
+        if (adultos%i==0) {
+            divisores_adul.push(i);
+        }
+        i++;
+    }
+
+    while (s<=ninos) {
+        if (ninos%s==0) {
+            divisores_nin.push(s);
+        }
+        s++;
+    }
+
+    if (adultos=="" || ninos=="") {
         alert("ERROR, introduzca algún valor en cada uno de los campos.");
     }
     else {
-        if (adultos==1 && niños==0 || adultos==2 && niños==0) {
+        if (adultos==1 && ninos==0 || divisores_adul.includes(2,1) && ninos==0) {
             var aleatorio =  Math.random(); 
             aleatorio = aleatorio * 100 + 1;
             aleatorio = Math.trunc(aleatorio);
 
-            alert("Necesitará una habitación Doble. Hay " + aleatorio + " habitaciones dobles disponibles en estos momentos.");
+            alert("Necesitará habitaciones Dobles. Hay " + aleatorio + " habitaciones dobles disponibles en estos momentos.");
         }
-        else if (adultos==2 && niños==1) {
+        else if (divisores_adul.includes(2,1) && (ninos%2)!=0) {
             var aleatorio =  Math.random(); 
             aleatorio = aleatorio * 100 + 1;
             aleatorio = Math.trunc(aleatorio);
 
-            alert("Necesitará una habitación Doble con Supletoria. Hay " + aleatorio + " habitaciones dobles disponibles en estos momentos.");
+            alert("Necesitará habitaciones Dobles con Supletoria. Hay " + aleatorio + " habitaciones dobles disponibles en estos momentos.");
         }
-        else if (adultos==3 && niños==0) {
+        else if (divisores_adul.includes(3,1) && ninos==0) {
             var aleatorio =  Math.random(); 
             aleatorio = aleatorio * 100 + 1;
             aleatorio = Math.trunc(aleatorio);
 
-            alert("Necesitará una habitación Triple. Hay " + aleatorio + " habitaciones dobles disponibles en estos momentos.");
+            alert("Necesitará habitaciones Triples. Hay " + aleatorio + " habitaciones dobles disponibles en estos momentos.");
         }
-        else if (adultos==2 && niños==2) {
+        else if (divisores_adul.includes(2,1) && divisores_nin.includes(2,1)) {
             var aleatorio =  Math.random(); 
             aleatorio = aleatorio * 100 + 1;
             aleatorio = Math.trunc(aleatorio);
 
-            alert("Necesitará una habitación Familiar. Hay " + aleatorio + " habitaciones dobles disponibles en estos momentos.");
+            alert("Necesitará habitaciones Familiares. Hay " + aleatorio + " habitaciones dobles disponibles en estos momentos.");
         }
         else {
-            alert("Lo sentimos, no disponemos de habitaciones para el número de personas indicadas. Recuerde que sólo podrá consultar por habitaciones de como máximo 4 personas en total.");
+            alert("ERROR");
         }
     }        
 }
