@@ -15,7 +15,7 @@ function banners() {
 
     if (contador  == 0) {
         document.getElementById("enlace").href = "https://store.dsautomobiles.es/configurable"; //cambiar url de enlace
-        document.getElementById("banner").src = "./images/banner0.png";
+        document.getElementById("banner").src = "./images/banner0.png"; //cambiar imagen
     }
 
     if (contador  == 1) {

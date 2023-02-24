@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ls.js"></script>
+    <title>LOCAL STORAGE</title>
+</head>
+<body>
+   Clave: <input id="clave" type="textbox">
+   Valor: <input id="valor" type="textbox">
+
+   <button id="guardar" onclick="guardar()">GUARDAR</button>
+
+   <p id="solucion"></p>
+
+   <script>
+        function guardar() {
+        // Set Item
+        localStorage.setItem("clave", document.getElementById("clave").valor);
+        localStorage.setItem("valor", document.getElementById("valor").valor);
+        
+        document.getElementById("solucion").innerHTML = localStorage.getItem("clave") + localStorage.getItem("valor");
+        }
+    </script>
+</body>
+</html>
