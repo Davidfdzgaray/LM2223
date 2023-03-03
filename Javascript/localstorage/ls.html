@@ -12,16 +12,30 @@
 
    <button id="guardar" onclick="guardar()">GUARDAR</button>
 
+   <button id="mostrar" onclick="mostrar()">MOSTRAR</button>
+
    <p id="solucion"></p>
 
    <script>
         function guardar() {
         // ASIGNAR ATRIBUTOS
-        localStorage.setItem(clave, document.getElementById("clave").value);
-        localStorage.setItem(valor, document.getElementById("valor").value);
+            let clave = document.getElementById("clave").value;
+            let valor = document.getElementById("valor").value;
+            localStorage.setItem(clave,valor);
+
+            document.getElementById("solucion").innerHTML = "La clave es: " + clave + " y el valor: " + valor;
+        }
+
+        function mostrar() {
         // MOSTRAR ATRIBUTOS
-        var solucion = "La clave es: " + localStorage.getItem(clave) + " y el valor: " + localStorage.getItem(valor);
-        document.getElementById("solucion").innerHTML = solucion;
+            let clave = document.getElementById("clave").value;
+            let valor = localStorage.getItem(clave);
+            if (valor!=null) {
+                document.getElementById("solucion").innerHTML = "He recuperado " + valor + " asociado a la clave " + clave + " en localStorage";
+            }
+            else {
+                document.getElementById("solucion").innerHTML = "No había nada en localStorage asociado a esa clave";
+            }
         }
     </script>
 </body>

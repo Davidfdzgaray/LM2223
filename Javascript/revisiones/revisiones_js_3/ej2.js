@@ -18,12 +18,6 @@ function iniciar() {
     aleatorio = aleatorio * 10 + 1;
     aleatorio = Math.trunc(aleatorio);
 
-    /*var tiempo =  Math.random(); 
-    tiempo = tiempo * 2;
-    tiempo = tiempo * 1000;
-
-    setTimeout(tiempo)*/
-
     switch (aleatorio) {
         case 1:
             document.getElementById("azul").style.opacity= "1";

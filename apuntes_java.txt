@@ -1,5 +1,9 @@
     <script src="js7.js"></script>
 
+    var aleatorio =  Math.random(); 
+    aleatorio = aleatorio * 100 + 1;
+    aleatorio = Math.trunc(aleatorio);
+
 <script>
 <p id="parrafo"></p>
 <script>
