@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="ss.js"></script>
     <title>SESSION STORAGE</title>
 </head>
 <body>
-    
+   Clave: <input id="clave" type="textbox">
+   Valor: <input id="valor" type="textbox">
+
+   <button id="guardar" onclick="guardar()">GUARDAR</button>
+
+   <p id="solucion"></p>
+
+   <script>
+        function guardar() {
+        // ASIGNAR ATRIBUTOS
+        sessionStorage.setItem(clave, document.getElementById("clave").value);
+        sessionStorage.setItem(valor, document.getElementById("valor").value);
+        // MOSTRAR ATRIBUTOS
+        var solucion = "La clave es: " + sessionStorage.getItem(clave) + " y el valor: " + sessionStorage.getItem(valor);
+        document.getElementById("solucion").innerHTML = solucion;
+        }
+    </script>
 </body>
 </html>

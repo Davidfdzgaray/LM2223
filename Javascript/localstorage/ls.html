@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="ls.js"></script>
     <title>LOCAL STORAGE</title>
 </head>
 <body>
@@ -17,11 +16,12 @@
 
    <script>
         function guardar() {
-        // Set Item
-        localStorage.setItem("clave", document.getElementById("clave").valor);
-        localStorage.setItem("valor", document.getElementById("valor").valor);
-        
-        document.getElementById("solucion").innerHTML = localStorage.getItem("clave") + localStorage.getItem("valor");
+        // ASIGNAR ATRIBUTOS
+        localStorage.setItem(clave, document.getElementById("clave").value);
+        localStorage.setItem(valor, document.getElementById("valor").value);
+        // MOSTRAR ATRIBUTOS
+        var solucion = "La clave es: " + localStorage.getItem(clave) + " y el valor: " + localStorage.getItem(valor);
+        document.getElementById("solucion").innerHTML = solucion;
         }
     </script>
 </body>
