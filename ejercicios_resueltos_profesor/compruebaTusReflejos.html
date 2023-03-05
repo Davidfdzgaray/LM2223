@@ -12,6 +12,7 @@
                 position:relative;
                 top:100px;
                 left:200px;
+                cursor: pointer;
             }
             .bold
             {
@@ -23,9 +24,12 @@
         <h1>¡Comprueba tus reflejos!</h1>
         <h2>¡Haz click en los circulos y rectángulos tan rápido como puedas!</h2>
         <p class="bold">Tiempo de reacción: <span id="tiempoReaccion"></span></p>
+        <p class="bold">Récord actual: <span id="record"></span></p>
         <div id="forma"></div>
         <script type="text/javascript">
-            var inicio = new Date().getTime(); // Alcance global
+            var inicio = new Date().getTime(); 
+            var record;
+            var resultados = [];
             
             function obtenerColorAleatorio() {
                 let letters = '0123456789ABCDEF'.split('');
@@ -38,9 +42,16 @@
             }
             function aparecerForma()
             {
+                var record = localStorage.getItem("record");
+                if (record!=null) {
+                    resultados.push(record);
+                    document.getElementById("record").innerHTML = record + "s";
+                }
+
                 let top = Math.random()*400;
                 let left = Math.random()*400;
                 let width = (Math.random()*200)+100;
+
                 if (Math.random()>0.5)
                     {
                         document.getElementById("forma").style.borderRadius = "50%";
@@ -74,6 +85,10 @@
                 diferencia = (fin-inicio)/1000;
                 document.getElementById("tiempoReaccion").innerHTML = diferencia + "s";
                 aparecerFormaDespuesRetraso();
+
+                record = Math.min.apply(null, resultados);
+                document.getElementById("record").innerHTML = record + "s";
+                localStorage.setItem("record",JSON.stringify(record));
             }
         </script>
     </body>

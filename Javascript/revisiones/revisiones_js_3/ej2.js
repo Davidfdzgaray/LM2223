@@ -1,3 +1,8 @@
+var inicio = new Date().getTime();
+var diferencia;
+var record;
+var resultados = [];
+
 function reset() {
     document.getElementById("azul").style.opacity= "0";
     document.getElementById("rojo").style.opacity= "0";
@@ -13,6 +18,12 @@ function reset() {
 
 function iniciar() {
     reset();
+
+    var record = localStorage.getItem("record");
+    if (record!=null) {
+        resultados.push(record);
+        document.getElementById("record").innerHTML = "El récord actual es: " + record + " s";
+    }
 
     var aleatorio =  Math.random(); 
     aleatorio = aleatorio * 10 + 1;
@@ -50,8 +61,30 @@ function iniciar() {
             document.getElementById("cian").style.opacity= "1";
         break;
     }
+    inicio = new Date().getTime();
 }
 
 function clickar() {
+    let fin;
+    fin = new Date().getTime();
+    diferencia = (fin-inicio)/1000;
+    document.getElementById("tiemporeaccion").innerHTML = "Tiempo de reacción: " + diferencia + "s";
+    resultados.push(diferencia);
+
+    record = Math.min.apply(null, resultados);
+    document.getElementById("record").innerHTML = "El récord actual es: " + record + " s";;
+    localStorage.setItem("record",JSON.stringify(record));
+
     iniciar();
 }
+
+
+/*function guardar() {
+    if () {
+    let clave = ;
+    let valor = ;
+    }
+    else {
+
+    }
+}*/
