@@ -20,7 +20,7 @@ function iniciar() {
     reset();
 
     var record = localStorage.getItem("record");
-    if (record!=null) {
+    if (record!="") {
         resultados.push(record);
         document.getElementById("record").innerHTML = "El récord actual es: " + record + " s";
     }
@@ -77,14 +77,3 @@ function clickar() {
 
     iniciar();
 }
-
-
-/*function guardar() {
-    if () {
-    let clave = ;
-    let valor = ;
-    }
-    else {
-
-    }
-}*/

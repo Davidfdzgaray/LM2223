@@ -43,9 +43,12 @@
             function aparecerForma()
             {
                 var record = localStorage.getItem("record");
-                if (record!=null) {
+                if (record!="") {
                     resultados.push(record);
                     document.getElementById("record").innerHTML = record + "s";
+                }
+                else {
+                    document.getElementById("record").innerHTML = "";
                 }
 
                 let top = Math.random()*400;
@@ -86,6 +89,7 @@
                 document.getElementById("tiempoReaccion").innerHTML = diferencia + "s";
                 aparecerFormaDespuesRetraso();
 
+                resultados.push(diferencia);
                 record = Math.min.apply(null, resultados);
                 document.getElementById("record").innerHTML = record + "s";
                 localStorage.setItem("record",JSON.stringify(record));
