@@ -71,7 +71,7 @@ function clickar() {
     document.getElementById("tiemporeaccion").innerHTML = "Tiempo de reacción: " + diferencia + "s";
     resultados.push(diferencia);
 
-    record = Math.min.apply(null, resultados);
+    record = Math.min(...resultados);
     document.getElementById("record").innerHTML = "El récord actual es: " + record + " s";;
     localStorage.setItem("record",JSON.stringify(record));
 

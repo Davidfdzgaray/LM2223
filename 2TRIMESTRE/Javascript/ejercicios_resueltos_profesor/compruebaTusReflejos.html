@@ -29,7 +29,7 @@
         <script type="text/javascript">
             var inicio = new Date().getTime(); 
             var record;
-            var resultados = [1.00];
+            var resultados = [];
             
             function obtenerColorAleatorio() {
                 let letters = '0123456789ABCDEF'.split('');
@@ -87,7 +87,7 @@
                 aparecerFormaDespuesRetraso();
 
                 resultados.push(diferencia);
-                record = Math.min.apply(null, resultados);
+                record = Math.min(...resultados);
                 document.getElementById("record").innerHTML = record + "s";
                 localStorage.setItem("record",JSON.stringify(record));
             }
