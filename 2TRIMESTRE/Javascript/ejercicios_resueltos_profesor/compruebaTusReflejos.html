@@ -29,7 +29,7 @@
         <script type="text/javascript">
             var inicio = new Date().getTime(); 
             var record;
-            var resultados = [];
+            var resultados = [1.00];
             
             function obtenerColorAleatorio() {
                 let letters = '0123456789ABCDEF'.split('');
@@ -46,9 +46,6 @@
                 if (record!="") {
                     resultados.push(record);
                     document.getElementById("record").innerHTML = record + "s";
-                }
-                else {
-                    document.getElementById("record").innerHTML = "";
                 }
 
                 let top = Math.random()*400;
