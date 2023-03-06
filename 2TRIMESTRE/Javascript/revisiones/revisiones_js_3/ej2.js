@@ -19,8 +19,8 @@ function reset() {
 function iniciar() {
     reset();
 
-    var record = localStorage.getItem("record");
-    if (record!="") {
+    if (localStorage.getItem('record')!=undefined) {
+        record=localStorage.getItem('record');
         resultados.push(record);
         document.getElementById("record").innerHTML = "El récord actual es: " + record + " s";
     }
