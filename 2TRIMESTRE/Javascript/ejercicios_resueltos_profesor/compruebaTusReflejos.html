@@ -42,9 +42,8 @@
             }
             function aparecerForma()
             {
-                var record = localStorage.getItem("record");
-                if (record!="") {
-                    resultados.push(record);
+                if(localStorage.getItem('record')!=undefined){
+                    record=localStorage.getItem('record');
                     document.getElementById("record").innerHTML = record + "s";
                 }
 
