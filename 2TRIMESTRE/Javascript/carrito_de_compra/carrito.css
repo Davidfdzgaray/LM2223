@@ -22,4 +22,29 @@ hr {
 
 .carrito {
     margin-top: 10%;
+
+}
+
+.vaciar{
+    height: 40px;
+    width: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: rgb(207, 131, 131);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.img_carrito{
+    height: 35px;
+    width: auto;
+    float: right;
+}
+
+.carrito_palabra{
+
+    font-family: Arial, Helvetica, sans-serif;
+   font-size: 35px;
+
 }
