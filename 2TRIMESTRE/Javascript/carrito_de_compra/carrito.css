@@ -5,11 +5,21 @@ img {
 
 .contenedor {
     width: 100vh;
-    height: 100vh;
-}
-
-.elementos {
+    height: auto;
     display: grid;
     grid-template-columns: 30% 30% 30% 30%;
     grid-gap: 10px;
+}
+
+hr {
+    width: 160%;
+}
+
+.raton, .teclado, .monitor, .webcam, .torre, .portatil {
+    display: flex;
+    align-items: center;
+}
+
+.carrito {
+    margin-top: 10%;
 }
