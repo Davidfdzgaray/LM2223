@@ -1,0 +1,15 @@
+img {
+    width: 80%;
+    height: auto;
+}
+
+.contenedor {
+    width: 100vh;
+    height: 100vh;
+}
+
+.elementos {
+    display: grid;
+    grid-template-columns: 30% 30% 30% 30%;
+    grid-gap: 10px;
+}
