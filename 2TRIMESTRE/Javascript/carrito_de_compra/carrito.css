@@ -4,28 +4,29 @@ img {
 }
 
 .contenedor {
-    width: 100vh;
+    width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 30% 30% 30% 30%;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
     grid-gap: 10px;
 }
 
-hr {
-    width: 160%;
-}
-
-.raton, .teclado, .monitor, .webcam, .torre, .portatil {
+.raton,
+.teclado,
+.monitor,
+.webcam,
+.torre,
+.portatil {
     display: flex;
     align-items: center;
 }
 
 .carrito {
     margin-top: 10%;
-
+    margin-left: 15%;
 }
 
-.vaciar{
+.comprar {
     height: 40px;
     width: 80px;
     font-family: Arial, Helvetica, sans-serif;
@@ -36,15 +37,35 @@ hr {
     border-radius: 10px;
 }
 
-.img_carrito{
-    height: 35px;
-    width: auto;
-    float: right;
+.vaciar {
+    height: 40px;
+    width: 80px;
+    background-color: rgb(207, 131, 131);
+    border: none;
+    border-radius: 10px;
+
+    background-image: url(images/basura.png);
+    background-repeat: no-repeat;
+    background-size: 30px auto;
+    background-position: center;
 }
 
-.carrito_palabra{
+button{
+    cursor: pointer;
+}
 
+.img_carrito {
+    height: 35px;
+    width: auto;
+    margin-left: 0px;
+}
+
+.carrito_palabra {
     font-family: Arial, Helvetica, sans-serif;
-   font-size: 35px;
+    font-size: 35px;
+}
 
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
