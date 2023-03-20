@@ -1,51 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="carrito.css">
     <script src="carrito.js"></script>
     <title>CARRITO DE COMPRA</title>
 </head>
 <body>
     <div class="contenedor">
-        <!-- Elementos -->
-        <div class="monitor">
-            <img src="images/monitor.jpg" alt=""><br>
-            <button>-</button><p class="monitor_c"></p><button>+</button>
-        </div>
-        <div class="teclado">
-            <img src="images/teclado.png" alt=""><br>
-            <button>-</button><p class="teclado_c"></p><button>+</button>
-        </div>
-        <div class="raton">
-            <img src="images/raton.png" alt=""><br>
-            <button>-</button><p class="raton_c"></p><button>+</button>
+        <div class="elementos">
+            <!-- Elementos -->
+            <div class="elemento">
+                <p>Monitor</p>
+                <img src="images/monitor.jpg" alt="">
+                <p><b>570€</b></p>
+                <p ><button>-</button><input type="text" readonly onmousedown="return false;" id="monitor_c"><button>+</button></p>            
+            </div>
+            <div class="elemento">
+                <p>Teclado</p>
+                <img src="images/teclado.png" alt="">
+                <p><b>10€</b></p>
+                <p ><button>-</button><input type="text" readonly onmousedown="return false;" class="teclado_c"><button>+</button></p>            
+            </div>
+            <div class="elemento">
+                <p>Ratón</p>
+                <img src="images/raton.png" alt="">
+                <p><b>5€</b></p>
+                <p ><button>-</button><input type="text" readonly onmousedown="return false;" class="raton_c"><button>+</button></p>            
+            </div>
+            <div class="elemento">
+                <p>Torre</p>
+                <img src="images/torre.png" alt="">
+                <p><b>20€</b></p>
+                <p ><button>-</button><input type="text" readonly onmousedown="return false;" class="torre_c"><button>+</button></p>            
+            </div>
+            <div class="elemento">
+                <p>Portátil</p>
+                <img src="images/portatil.png" alt="">
+                <p><b>400€</b></p>
+                <p ><button>-</button><input type="text" readonly onmousedown="return false;" class="portatil_c"><button>+</button></p>            
+            </div>
+            <div class="elemento">
+                <p>Webcam</p>
+                <img src="images/webcam.png" alt="">
+                <p><b>70€</b></p>
+                <p ><button>-</button><input type="text" readonly onmousedown="return false;" class="webcam_c"><button>+</button></p>            
+            </div>
         </div>
         <div class="carrito">
             <!-- Carrito -->
             <span class="carrito_palabra"><b>Carrito</b></span><img src="images/carrito.png" class="img_carrito" alt="">
             <!-- Elementos del carrito -->
+            <ul>
+                <li>Monitor x <span class="monitor_c"></span></li>
+                <li>Teclado x <span class="teclado_c"></span></li>
+                <li>Ratón x <span class="raton_c"></span></li>
+                <li>Torre x <span class="torre_c"></span></li>
+                <li>Portátil x <span class="portatil_c"></span></li>
+                <li>Webcam x <span class="webcam_c"></span></li>
+            </ul>
             <hr>
             <!-- Precio total -->
-            <p>Total: <span id="total"></span>€</p>
+            <p class="total">Total: <span id="total"></span>€</p>
             <!-- Botones -->
-            <button id="vaciar" class="vaciar"></button>
-            <button id="comprar" class="comprar">Comprar</button>
-        </div>
-        <div class="torre">
-            <img src="images/torre.png" alt=""><br>
-            <button>-</button><p class="torre_c"></p><button>+</button>
-        </div>
-        <div class="portatil">
-            <img src="images/portatil.png" alt=""><br>
-            <button>-</button><p class="portatil_c"></p><button>+</button>
-        </div>
-        <div class="webcam">
-            <img src="images/webcam.png" alt="">
-            <button>-</button><p class="webcam_c"></p><button>+</button>
-        </div>
+            <button id="comprar" class="comprar" onclick="comprar()">Comprar</button>
+            <button id="vaciar" class="vaciar" onclick="vaciar()"></button>
+        </div> 
     </div>
+    <script>iniciar();</script>
 </body>
 </html>
