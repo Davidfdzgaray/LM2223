@@ -19,50 +19,63 @@
                 <p>Monitor</p>
                 <img src="images/monitor.jpg" alt="">
                 <p><b>570€</b></p>
-                <p ><button>-</button><input type="text" readonly onmousedown="return false;" id="monitor_c"><button>+</button></p>            
+                <p ><button  onclick="restar('monitor_c')">-</button>
+                    <input type="text" readonly onmousedown="return false;" id="monitor_c">
+                <button  onclick="sumar('monitor_c')">+</button></p>            
             </div>
             <div class="elemento">
                 <p>Teclado</p>
                 <img src="images/teclado.png" alt="">
                 <p><b>10€</b></p>
-                <p ><button>-</button><input type="text" readonly onmousedown="return false;" class="teclado_c"><button>+</button></p>            
+                <p ><button  onclick="restar('teclado_c')">-</button>
+                    <input type="text" readonly onmousedown="return false;" id="teclado_c">
+                <button  onclick="sumar('teclado_c')">+</button></p>            
             </div>
             <div class="elemento">
                 <p>Ratón</p>
                 <img src="images/raton.png" alt="">
                 <p><b>5€</b></p>
-                <p ><button>-</button><input type="text" readonly onmousedown="return false;" class="raton_c"><button>+</button></p>            
+                <p ><button  onclick="restar('raton_c')">-</button>
+                    <input type="text" readonly onmousedown="return false;" id="raton_c">
+                <button  onclick="sumar('raton_c')">+</button></p>            
             </div>
             <div class="elemento">
                 <p>Torre</p>
                 <img src="images/torre.png" alt="">
                 <p><b>20€</b></p>
-                <p ><button>-</button><input type="text" readonly onmousedown="return false;" class="torre_c"><button>+</button></p>            
+                <p ><button  onclick="restar('torre_c')">-</button>
+                    <input type="text" readonly onmousedown="return false;" id="torre_c">
+                <button  onclick="sumar('torre_c')">+</button></p>            
             </div>
             <div class="elemento">
                 <p>Portátil</p>
                 <img src="images/portatil.png" alt="">
                 <p><b>400€</b></p>
-                <p ><button>-</button><input type="text" readonly onmousedown="return false;" class="portatil_c"><button>+</button></p>            
+                <p ><button  onclick="restar('portatil_c')">-</button>
+                    <input type="text" readonly onmousedown="return false;" id="portatil_c">
+                <button  onclick="sumar('portatil_c')">+</button></p>            
             </div>
             <div class="elemento">
                 <p>Webcam</p>
                 <img src="images/webcam.png" alt="">
                 <p><b>70€</b></p>
-                <p ><button>-</button><input type="text" readonly onmousedown="return false;" class="webcam_c"><button>+</button></p>            
+                <p ><button  onclick="restar('webcam_c')">-</button>
+                    <input type="text" readonly onmousedown="return false;" id="webcam_c">
+                <button  onclick="sumar('webcam_c')">+</button></p>            
             </div>
         </div>
+
         <div class="carrito">
             <!-- Carrito -->
             <span class="carrito_palabra"><b>Carrito</b></span><img src="images/carrito.png" class="img_carrito" alt="">
             <!-- Elementos del carrito -->
             <ul>
-                <li>Monitor x <span class="monitor_c"></span></li>
-                <li>Teclado x <span class="teclado_c"></span></li>
-                <li>Ratón x <span class="raton_c"></span></li>
-                <li>Torre x <span class="torre_c"></span></li>
-                <li>Portátil x <span class="portatil_c"></span></li>
-                <li>Webcam x <span class="webcam_c"></span></li>
+                <li>Monitor x <span id="monitor_c2"></span></li>
+                <li>Teclado x <span id="teclado_c2"></span></li>
+                <li>Ratón x <span id="raton_c2"></span></li>
+                <li>Torre x <span id="torre_c2"></span></li>
+                <li>Portátil x <span id="portatil_c2"></span></li>
+                <li>Webcam x <span id="webcam_c2"></span></li>
             </ul>
             <hr>
             <!-- Precio total -->

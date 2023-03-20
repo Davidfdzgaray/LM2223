@@ -18,7 +18,6 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 25px;
-
 }
 
 img {
@@ -84,10 +83,6 @@ ul{
     font-size: 20px;
 }
 
-.elemento {
-    font-size: 25px;
-}
-
 .monitor_c{
     text-align: center;
 }
@@ -95,6 +90,7 @@ ul{
 input {
     width: 35px;
     height: 30px;
+    text-align: center;
 }
 
 .total {
