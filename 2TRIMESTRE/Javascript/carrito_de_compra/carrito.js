@@ -1,10 +1,9 @@
 /*GLOBALES*/
-var carrito = localStorage.getelemento("carrito");
-
+var carrito = localStorage.getItem("carrito");
 /*----------------------------------------*/
 
 function vaciar() {
-    document.getElementById("total").innerHTML = 0;
+    document.getElementById("precio_total").value = 0;
 
     document.getElementById("teclado_c").value = 0;
 
@@ -18,17 +17,7 @@ function vaciar() {
 
     document.getElementById("torre_c").value = 0;
 
-    document.getElementById("teclado_c2").innerHTML = 0;
-
-    document.getElementById("raton_c2").innerHTML = 0;
-
-    document.getElementById("monitor_c2").innerHTML = 0;
-
-    document.getElementById("webcam_c2").innerHTML = 0;
-
-    document.getElementById("portatil_c2").innerHTML = 0;
-
-    document.getElementById("torre_c2").innerHTML = 0;
+    igualar();
 }
 
 function iniciar(){
@@ -36,17 +25,7 @@ function iniciar(){
         vaciar();
     }
     else {
-        /*teclado_c = document.getElementByClassName("teclado_c").innerHTML;
-
-        raton_c = document.getElementByClassName("raton_c").innerHTML;
-
-        monitor_c = document.getElementByClassName("monitor_c").innerHTML;
-
-        webcam_c = document.getElementByClassName("webcam_c").innerHTML;
-
-        portatil_c = document.getElementByClassName("portatil_c").innerHTML;
-
-        torre_c = document.getElementByClassName("torre_c").innerHTML;*/
+        
     }
 }
 
@@ -70,6 +49,26 @@ function restar(elemento) {
     igualar();
 }
 
+function total() {
+    var mo=document.getElementById("monitor_c").value;
+    var te=document.getElementById("teclado_c").value;
+    var ra=document.getElementById("raton_c").value;
+    var to=document.getElementById("torre_c").value;
+    var po=document.getElementById("portatil_c").value;
+    var we=document.getElementById("webcam_c").value;
+    
+    mo = 570*mo;
+    te = 10*te;
+    ra = 5*ra;
+    to = 20*to;
+    po = 400*po;
+    we = 70*we;
+    
+    var total = mo+te+ra+to+po+we;
+
+    document.getElementById("precio_total").value=total;
+}
+
 function igualar() {
     document.getElementById("teclado_c2").innerHTML=document.getElementById("teclado_c").value;
     document.getElementById("raton_c2").innerHTML=document.getElementById("raton_c").value;
@@ -77,6 +76,8 @@ function igualar() {
     document.getElementById("torre_c2").innerHTML=document.getElementById("torre_c").value;
     document.getElementById("portatil_c2").innerHTML=document.getElementById("portatil_c").value;
     document.getElementById("webcam_c2").innerHTML=document.getElementById("webcam_c").value;
+
+    total();
 }
 
 

@@ -69,17 +69,18 @@
             <!-- Carrito -->
             <span class="carrito_palabra"><b>Carrito</b></span><img src="images/carrito.png" class="img_carrito" alt="">
             <!-- Elementos del carrito -->
+            <p>Resumen Del Pedido</p>
             <ul>
-                <li>Monitor x <span id="monitor_c2"></span></li>
-                <li>Teclado x <span id="teclado_c2"></span></li>
-                <li>Ratón x <span id="raton_c2"></span></li>
-                <li>Torre x <span id="torre_c2"></span></li>
-                <li>Portátil x <span id="portatil_c2"></span></li>
-                <li>Webcam x <span id="webcam_c2"></span></li>
+                <li class="mo">Monitor x <span id="monitor_c2"></span></li>
+                <li class="te">Teclado x <span id="teclado_c2"></span></li>
+                <li class="ra">Ratón x <span id="raton_c2"></span></li>
+                <li class="to">Torre x <span id="torre_c2"></span></li>
+                <li class="po">Portátil x <span id="portatil_c2"></span></li>
+                <li class="we">Webcam x <span id="webcam_c2"></span></li>
             </ul>
             <hr>
             <!-- Precio total -->
-            <p class="total">Total: <span id="total"></span>€</p>
+            <p class="total">Total: <input type="text" readonly onmousedown="return false;" class="num" id="precio_total"> €</p>
             <!-- Botones -->
             <button id="comprar" class="comprar" onclick="comprar()">Comprar</button>
             <button id="vaciar" class="vaciar" onclick="vaciar()"></button>
