@@ -1,5 +1,17 @@
 /*GLOBALES*/
-var carrito = localStorage.getItem("carrito");
+let carrito = localStorage.getItem("carrito");
+
+let teclado = localStorage.getItem("teclado");
+
+let raton = localStorage.getItem("raton");
+
+let monitor = localStorage.getItem("monitor");
+
+let webcam = localStorage.getItem("webcam");
+
+let portatil = localStorage.getItem("portatil");
+
+let torre = localStorage.getItem("torre");
 /*----------------------------------------*/
 
 function vaciar() {
@@ -25,7 +37,19 @@ function iniciar(){
         vaciar();
     }
     else {
-        
+        document.getElementById("teclado_c").value = teclado;
+
+        document.getElementById("raton_c").value = raton;
+
+        document.getElementById("monitor_c").value = monitor;
+
+        document.getElementById("webcam_c").value = webcam;
+
+        document.getElementById("portatil_c").value = portatil;
+
+        document.getElementById("torre_c").value = torre;
+
+        igualar();
     }
 }
 
@@ -67,6 +91,8 @@ function total() {
     var total = mo+te+ra+to+po+we;
 
     document.getElementById("precio_total").value=total;
+
+
 }
 
 function igualar() {
@@ -78,6 +104,24 @@ function igualar() {
     document.getElementById("webcam_c2").innerHTML=document.getElementById("webcam_c").value;
 
     total();
+}
+
+function guardar() {
+    let carrito = {
+        teclado: document.getElementById("teclado_c").value,
+        raton: document.getElementById("raton_c").value,
+        monitor: document.getElementById("monitor_c").value,
+        torre: document.getElementById("torre_c").value,
+        portatil: document.getElementById("portatil_c").value,
+        webcam: document.getElementById("webcam_c").value,
+    }
+    localStorage.setItem("carrito",JSON.stringify(carrito));
+    localStorage.setItem("teclado",(carrito['teclado']));
+    localStorage.setItem("raton",JSON.stringify(carrito['raton']));
+    localStorage.setItem("monitor",JSON.stringify(carrito['monitor']));
+    localStorage.setItem("torre",JSON.stringify(carrito['torre']));
+    localStorage.setItem("portatil",JSON.stringify(carrito['portatil']));
+    localStorage.setItem("webcam",JSON.stringify(carrito['webcam']));
 }
 
 
