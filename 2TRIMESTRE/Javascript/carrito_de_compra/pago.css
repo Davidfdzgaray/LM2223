@@ -1,0 +1,134 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	font-family: 'Oswald', sans-serif;
+}
+
+.total {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    background-color: transparent;
+    border-width: 0px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+body {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Oswald', sans-serif;
+	background: #ffe6c0;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ffe6c0, #d3a200);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ffe6c0, #d3a200); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#main {
+	position: relative;
+	width: 900px;
+	height: 380px;
+	left: 30px;
+	border-radius: 10px;
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
+	background-color: white;
+}
+
+#left {
+	position: relative;
+	background-image: url(images/pago.gif);
+	background-size: cover;
+	background-position: center;
+
+	height: calc(100% + 50px);
+	width: 40%;
+	top: -35px;
+	left: -50px;
+	padding: 10px 25px;
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
+	color: white;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+#left #head {
+	opacity: 0.95;
+}
+
+#right {
+	position: absolute;
+	width: calc(60% - 40px);
+	height: 100%;
+	top: 0;
+	left: 40%;
+	display: flex;
+	flex-flow: column nowrap;
+	padding-left: 20px;
+}
+
+#right form {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+}
+
+#right form input,
+#right form select {
+	-moz-appearance:none;
+	-webkit-appearance:none; 
+	appearance:none;
+	border: none;
+	border-bottom: 1.5px solid #ccc;
+	padding: 5px;
+	margin-top: 2.5px;
+	position: relative;
+}
+
+#right form .form-field {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	margin-bottom: 12.5px;
+}
+
+#right form #date-val {
+	display: flex;
+	justify-content: space-between;
+}
+
+#right form #date-val select {
+	width: 45%;
+}
+
+#right form button[type="submit"] {
+	padding: 5px;
+	border: none;
+	border-radius: 50px;
+	color: white;
+	background-color: #d3a200;
+	font-weight: 400;
+	font-size: 12pt;
+	margin-top: 10px;
+}
+
+#right form button[type="submit"]:hover {
+	background: transparent;
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
+	color: #d3a200;
+}
+
+#contrasena2 {
+	margin-left: 20px;
+}
+
+#contrasena {
+	margin-bottom: 8px;
+}

@@ -9,22 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="carrito.css">
     <script src="carrito.js"></script>
-    <title>CARRITO DE COMPRA</title>
+    <title>Carrito de Compra</title>
 </head>
 <body>
     <div class="contenedor">
         <div class="elementos">
             <!-- Elementos -->
             <div class="elemento">
-                <p>Monitor</p>
-                <img src="images/monitor.jpg" alt="">
+                <p><b>Monitor</b></p>
+                <img src="images/monitor.png" alt="">
                 <p><b>570€</b></p>
                 <p ><button  onclick="restar('monitor_c')">-</button>
                     <input type="text" readonly onmousedown="return false;" id="monitor_c">
                 <button  onclick="sumar('monitor_c')">+</button></p>            
             </div>
             <div class="elemento">
-                <p>Teclado</p>
+                <p><b>Teclado</b></p>
                 <img src="images/teclado.png" alt="">
                 <p><b>10€</b></p>
                 <p ><button  onclick="restar('teclado_c')">-</button>
@@ -32,7 +32,7 @@
                 <button  onclick="sumar('teclado_c')">+</button></p>            
             </div>
             <div class="elemento">
-                <p>Ratón</p>
+                <p><b>Ratón</b></p>
                 <img src="images/raton.png" alt="">
                 <p><b>5€</b></p>
                 <p ><button  onclick="restar('raton_c')">-</button>
@@ -40,7 +40,7 @@
                 <button  onclick="sumar('raton_c')">+</button></p>            
             </div>
             <div class="elemento">
-                <p>Torre</p>
+                <p><b>Torre</b></p>
                 <img src="images/torre.png" alt="">
                 <p><b>20€</b></p>
                 <p ><button  onclick="restar('torre_c')">-</button>
@@ -48,7 +48,7 @@
                 <button  onclick="sumar('torre_c')">+</button></p>            
             </div>
             <div class="elemento">
-                <p>Portátil</p>
+                <p><b>Portátil</b></p>
                 <img src="images/portatil.png" alt="">
                 <p><b>400€</b></p>
                 <p ><button  onclick="restar('portatil_c')">-</button>
@@ -56,7 +56,7 @@
                 <button  onclick="sumar('portatil_c')">+</button></p>            
             </div>
             <div class="elemento">
-                <p>Webcam</p>
+                <p><b>Webcam</b></p>
                 <img src="images/webcam.png" alt="">
                 <p><b>70€</b></p>
                 <p ><button  onclick="restar('webcam_c')">-</button>
@@ -80,10 +80,10 @@
             </ul>
             <hr>
             <!-- Precio total -->
-            <p class="total">Total: <input type="text" readonly onmousedown="return false;" id="precio_total"> €</p>
+            <p class="total"><b>Total: <input type="text" readonly onmousedown="return false;" id="precio_total"> €</b></p>
+            <p class="total">Costo de envío 4,99 €</p>
             <!-- Botones -->
-            <button id="comprar" class="comprar" onclick="comprar()">Comprar</button> <br><br><br>
-            <button id="guardar" class="comprar" onclick="guardar()">Guardar</button>
+            <button id="comprar" class="comprar"><a href="pago.html">Proceder al pago</a></button>
             <button id="vaciar" class="vaciar" onclick="vaciar()"></button>
         </div> 
     </div>

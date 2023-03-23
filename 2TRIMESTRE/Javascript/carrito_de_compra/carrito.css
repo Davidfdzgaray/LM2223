@@ -1,5 +1,8 @@
 body {
     font-family: 'Oswald', sans-serif;
+    background: #ff573d;
+    background: -webkit-linear-gradient(to right, #ff573d, #ffe6c0);
+    background: linear-gradient(to right, #ff573d, #ffe6c0);
 }
 
 .elementos {
@@ -40,19 +43,18 @@ img {
 .comprar {
     height: 40px;
     width: 100%;
-
     font-size: 18px;
-    background-color: rgb(207, 131, 131);
-    color: white;
+    background: white;
     border: none;
     border-radius: 10px;
     font-family: 'Oswald', sans-serif;
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
 }
 
 .vaciar {
     height: 40px;
     width: 100%;
-    background-color: rgb(207, 131, 131);
+    background: white;
     border: none;
     border-radius: 10px;
     margin-top: 5px;
@@ -61,6 +63,7 @@ img {
     background-repeat: no-repeat;
     background-size: 30px auto;
     background-position: center;
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
 }
 
 button{
@@ -88,7 +91,7 @@ ul{
 }
 
 input {
-    width: 35px;
+    width: 50px;
     height: 30px;
     text-align: center;
     background-color: transparent;
@@ -99,4 +102,9 @@ input {
 
 .total {
     font-size: 20px;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: black;
 }
