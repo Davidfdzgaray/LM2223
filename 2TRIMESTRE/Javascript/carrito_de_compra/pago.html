@@ -12,14 +12,14 @@
     <title>Detalles de Pago</title>
 </head>
 <body>
-    <div id="main">
-        <div id="left">
+    <div id="contenedor">
+        <div id="izquierda">
             <div id="head">
-                <h1>Total del pedido: <span id="total"></span> €</h1>
+                <h1>Total del pedido:<input type="text" readonly onmousedown="return false;" id="total">€</h1>
             </div>
             <h3>Pago Seguro</h3>
         </div>
-        <div id="right">
+        <div id="derecha">
             <h2>Rellene los siguientes campos:</h2>
             <form action="#">
                 <div id="inicio_sesion">
@@ -28,15 +28,14 @@
                     <label>Correo electrónico:</label>
                     <input type="text" id="email">
                 </div>
-                <div id="form-card" class="form-field">
+                <div class="form-campo">
                     <label>Número de tarjeta:</label>
                     <input maxlength="19" placeholder="1111 2222 3333 4444" id="tarjeta">
                 </div>
-                <div id="form-date" class="form-field">
-                    <label for="expiry-month">Fecha de caducidad:</label>
-                    <div id="date-val">
-                        <select id="expiry-month" required>
-                            <option id="trans-label_month" value="" default="default" selected="selected">Mes</option>
+                <div class="form-campo">
+                    <label for="mes">Fecha de caducidad:</label>
+                    <div id="fecha">
+                        <select id="mes">
                             <option value="1">01</option>
                             <option value="2">02</option>
                             <option value="3">03</option>
@@ -50,8 +49,7 @@
                             <option value="11">11</option>
                             <option value="12">12</option>
                         </select>
-                        <select id="expiry-year" required>
-                            <option id="trans-label_year" value="" default="" selected="selected">Año</option>
+                        <select id="ano">
                             <option value="2023">23</option>
                             <option value="2024">24</option>
                             <option value="2025">25</option>
@@ -68,7 +66,7 @@
                         </select>
                     </div>
                 </div>
-                <div id="form-sec-code" class="form-field">
+                <div class="form-campo">
                     <label>CVV:</label>
                     <input type="password" maxlength="3" placeholder="123" id="codigo">
                 </div>
@@ -82,6 +80,7 @@
             </form>
         </div>
     </div>
+    <div id="solucion"></div>
     <script>
         iniciar();
     </script>

@@ -108,3 +108,7 @@ a:link, a:visited, a:active {
     text-decoration:none;
     color: black;
 }
+
+#precio_total {
+    font-weight: bold;
+}

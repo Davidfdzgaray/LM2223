@@ -81,12 +81,13 @@
             <hr>
             <!-- Precio total -->
             <p class="total"><b>Total: <input type="text" readonly onmousedown="return false;" id="precio_total"> €</b></p>
-            <p class="total">Costo de envío 4,99 €</p>
+            <p class="total"> +  Costos de Envío: 4,99 €</p>
             <!-- Botones -->
-            <button id="comprar" class="comprar"><a href="pago.html">Proceder al pago</a></button>
+            <button id="comprar" class="comprar" onclick="window.location.href='pago.html'">Proceder al pago</button>
             <button id="vaciar" class="vaciar" onclick="vaciar()"></button>
         </div> 
     </div>
     <script>iniciar();</script>
 </body>
 </html>
+

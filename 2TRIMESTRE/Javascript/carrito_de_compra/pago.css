@@ -21,7 +21,7 @@ body {
 	background: linear-gradient(to right, #ffe6c0, #d3a200); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#main {
+#contenedor {
 	position: relative;
 	width: 900px;
 	height: 52%;
@@ -31,7 +31,7 @@ body {
 	background-color: white;
 }
 
-#left {
+#izquierda {
 	position: relative;
 	background-image: url(images/pago.gif);
 	background-size: cover;
@@ -49,11 +49,11 @@ body {
 	justify-content: space-between;
 }
 
-#left #head {
+#izquierda #head {
 	opacity: 0.95;
 }
 
-#right {
+#derecha {
 	position: absolute;
 	width: calc(60% - 40px);
 	height: 100%;
@@ -64,14 +64,14 @@ body {
 	padding-left: 20px;
 }
 
-#right form {
+#derecha form {
 	display: flex;
 	flex-flow: column nowrap;
 	width: 100%;
 }
 
-#right form input,
-#right form select {
+#derecha form input,
+#derecha form select {
 	-moz-appearance:none;
 	-webkit-appearance:none; 
 	appearance:none;
@@ -82,23 +82,23 @@ body {
 	position: relative;
 }
 
-#right form .form-field {
+#derecha form .form-campo {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
 	margin-bottom: 12.5px;
 }
 
-#right form #date-val {
+#derecha form #fecha {
 	display: flex;
 	justify-content: space-between;
 }
 
-#right form #date-val select {
+#derecha form #fecha select {
 	width: 45%;
 }
 
-#right form button[type="submit"] {
+#derecha form button[type="submit"] {
 	padding: 5px;
 	border: none;
 	border-radius: 50px;
@@ -109,7 +109,7 @@ body {
 	margin-top: 10px;
 }
 
-#right form button[type="submit"]:hover {
+#derecha form button[type="submit"]:hover {
 	background: transparent;
     box-shadow: 4px 4px rgba(0,0,0,0.5);
 	color: #d3a200;
@@ -129,8 +129,10 @@ body {
 }
 
 #total {
-	width: 50px;
+	width: 30%;
     height: 30px;
+	color: white;
+	font-weight: bold;
     text-align: center;
     background-color: transparent;
     border-width: 0px;
@@ -140,4 +142,13 @@ body {
 
 #error_e,#error_u,#error_t,#error_c {
 	color: red;
+}
+
+h3 {
+	margin-left: 75%;
+}
+
+#solucion {
+	color: white;
+	font-size: 20px;
 }
