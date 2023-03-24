@@ -10,16 +10,6 @@ button {
 	font-family: 'Oswald', sans-serif;
 }
 
-.total {
-    width: 50px;
-    height: 30px;
-    text-align: center;
-    background-color: transparent;
-    border-width: 0px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-}
-
 body {
 	display: flex;
 	flex-flow: row nowrap;
@@ -34,7 +24,7 @@ body {
 #main {
 	position: relative;
 	width: 900px;
-	height: 380px;
+	height: 52%;
 	left: 30px;
 	border-radius: 10px;
     box-shadow: 10px 10px rgba(0,0,0,0.5);
@@ -121,14 +111,33 @@ body {
 
 #right form button[type="submit"]:hover {
 	background: transparent;
-    box-shadow: 10px 10px rgba(0,0,0,0.5);
+    box-shadow: 4px 4px rgba(0,0,0,0.5);
 	color: #d3a200;
 }
 
-#contrasena2 {
-	margin-left: 20px;
+#email {
+	width: 36%;
 }
 
-#contrasena {
+#usuario {
+	width: 28%;
+}
+
+
+#inicio_sesion {
 	margin-bottom: 8px;
+}
+
+#total {
+	width: 50px;
+    height: 30px;
+    text-align: center;
+    background-color: transparent;
+    border-width: 0px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 31px;
+}
+
+#error_e,#error_u,#error_t,#error_c {
+	color: red;
 }

@@ -75,8 +75,7 @@ function total() {
     var total = mo+te+ra+to+po+we;
 
     document.getElementById("precio_total").value=total;
-
-
+    localStorage.setItem("total",JSON.stringify(total));
 }
 
 function igualar() {
@@ -87,6 +86,7 @@ function igualar() {
     document.getElementById("portatil_c2").innerHTML=document.getElementById("portatil_c").value;
     document.getElementById("webcam_c2").innerHTML=document.getElementById("webcam_c").value;
 
+    guardar();
     total();
 }
 
