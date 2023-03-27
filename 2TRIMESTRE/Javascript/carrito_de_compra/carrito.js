@@ -102,6 +102,10 @@ function guardar() {
     localStorage.setItem("carrito",JSON.stringify(carrito));
 }
 
-
-
+function pagar() {
+    let total = JSON.parse(localStorage.getItem("total"));
+    if (total > 0) {
+        window.location.href='pago.html';
+    }
+}
 
