@@ -1,15 +1,15 @@
 
 $(document).ready(function(){
     $("#desvanecer").click(function() {
-        $("p").fadeIn();
-        $("h1").fadeIn();
+        $("p").fadeOut();
+        $("h1").fadeOut("fast");
     })
 });
 
 $(document).ready(function(){
     $("#aparecer").click(function() {
-        $("p").fadeOut();
-        $("h1").fadeOut();
+        $("p").fadeIn();
+        $("h1").fadeIn("slow");
     })
 });
 
