@@ -7,7 +7,7 @@ function iniciar() {
     else {
         document.getElementById("total").value = total+4.99;
     }
-}//<span id="total"></span>
+}
 
 function validacion_email(email) {
     re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
