@@ -4,7 +4,7 @@ $('button').click(function() {
       dataType: "json",
       type:"GET",
       success: function(data) {
-        $("#objetivo").html('<img src="$'+data+'.urls.small" alt="{'+data+'.alt_description}">');
+        $("#objetivo").html('<img src="$'+data+'.urls.small" alt="'+data+'.alt_description">');
       },
       error: function() {
         $("#objetivo").text("ERROR");
