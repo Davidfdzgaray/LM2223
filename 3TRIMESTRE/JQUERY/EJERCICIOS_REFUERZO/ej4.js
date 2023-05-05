@@ -8,7 +8,7 @@ $('button').click(function() {
         window.open("href", data.html_url);
       },
       error: function() {
-        $("#objetivo").text("Ha ocurrido un error al buscar el titulo indicado");
+        $("#objetivo").text("Ha ocurrido un error al buscar el usuario indicado");
       }
     });
   });
