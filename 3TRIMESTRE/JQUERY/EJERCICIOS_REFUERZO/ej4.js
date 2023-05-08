@@ -1,19 +1,17 @@
  $(document).ready(function () {
     $('#buscar').click(function () {
-        let nombre = $('#nombre').val();
+        let nombre = $('#entrada').val();
 
-        // Llamada AJAX utilizando jQuery
         $.ajax({
-            url: "https://api.github.com/users/"+nombre,
+            url: 'https://api.github.com/users/'+nombre,
+            dataType: "json",
+            type:"GET",
             success: function (data) {
-                if (data.Response === "True") {
-                    $("#objetivo").text("Usuario encontrado");
-                } else {
-                    $('#resultado').html('<p>No se encontró el perfil.</p>');
-                }
-            },
+                console.log(data);
+                window.location=data.html_url;
+                },
             error: function () {
-                $('#resultado').html('<p>Error al buscar el perfil.</p>');
+                $('#resultado').html('Error al buscar el perfil.');
             },
         });
     });

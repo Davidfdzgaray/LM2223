@@ -9,7 +9,13 @@ $(document).ready(function () {
             success: function (data) {
                 if (data.Response === "True") {
                     console.log(data);
-                    $('#resultado').html(`<h2>${data.Title} (${data.Year})</h2><img src="${data.Poster}" alt="${data.Title}"><p>Director: ${data.Director}</p><p>Actores: ${data.Actors}</p><p>Resumen: ${data.Plot}</p>`);
+                    $('#resultado').html(`
+                    <h2>${data.Title} (${data.Year})</h2>
+                    <img src="${data.Poster}" alt="${data.Title}">
+                    <p>Director: ${data.Director}</p>
+                    <p>Actores: ${data.Actors}</p>
+                    <p>Resumen: ${data.Plot}</p>
+                    `);
                 } else {
                     $('#resultado').html('<p>No se encontró la película.</p>');
                 }

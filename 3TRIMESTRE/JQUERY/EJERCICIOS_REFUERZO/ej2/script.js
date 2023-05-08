@@ -14,7 +14,7 @@ $(document).ready(function () {
                 },
                 error: function () {
                 $('#resultado').html('<p>No se pudo obtener la foto aleatoria.</p>');
-                },
-                });
-                });
-                });
+            },
+        });
+    });
+});

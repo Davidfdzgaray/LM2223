@@ -1,14 +1,17 @@
-$('button').click(function() {
+$(document).ready(function () {
+  $('button').click(function() {
+    let foto = $('#foto').val();
     $.ajax({
-      url: "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=49fbbac452fcd58209a513d785a406b9&text="+$("#foto").val()+"&format=json&nojsoncallback=1",
+      url: "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=5f7f06d33a0da82e96f0e7eb60d27cc8&text="+foto+"&format=json&nojsoncallback=1",
       dataType: "json",
       type:"GET",
-      success: function(data) {
-        $("#objetivo").text(data.url);
+      success: function (data) {
+        console.log(data);
+        $("#objetivo").html(data.photos);
       },
-      error: function() {
-        $("#objetivo").text("Ha ocurrido un error al buscar el titulo indicado");
-      }
+      error: function () {
+        $('#objetivo').html('No se encontró la foto.');
+      },
     });
+  });
 });
-
