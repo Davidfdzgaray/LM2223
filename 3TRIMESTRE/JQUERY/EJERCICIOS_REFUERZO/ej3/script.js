@@ -5,10 +5,9 @@ $(document).ready(function () {
 
         // Llamada AJAX utilizando jQuery
         $.ajax({
-            url: 'http://www.omdbapi.com/?apikey='+apiKey+'&t='+titulo,
+            url: `http://www.omdbapi.com/?apikey=${apiKey}&t=${titulo}`,
             success: function (data) {
                 if (data.Response === "True") {
-                    console.log(data);
                     $('#resultado').html(`
                     <h2>${data.Title} (${data.Year})</h2>
                     <img src="${data.Poster}" alt="${data.Title}">
