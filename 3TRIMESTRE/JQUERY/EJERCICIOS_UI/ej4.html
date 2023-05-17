@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+        .contenedor { width: 500px; height: 200px; position: relative; }
+        #boton { padding: .5em 1em; text-decoration: none; }
+        #boton2 { padding: .5em 1em; text-decoration: none; }
+        #efecto { width: 240px; height: 170px; padding: 0.4em; position: relative; background: #fff; }
+        #efecto h3 { margin: 0; padding: 0.4em; text-align: center; }
+    </style>
+    <title>UI 4</title>
+    <script>
+    $( function() {
+        var state = true;
+        $( "#boton" ).on( "click", function() {
+        if ( state ) {
+            $( "#efecto" ).animate({
+            backgroundColor: 'red',
+            color: "#fff",
+            width: 500
+            }, 1000 );
+        } else {
+            $( "#efecto" ).animate({
+            backgroundColor: "#fff",
+            color: "#000",
+            width: 240
+            }, 1000 );
+        }
+        state = !state;
+        });
+
+        $( "#boton2" ).on( "click", function() {
+        if ( state ) {
+            $( "#efecto" ).animate({
+            backgroundColor: "green",
+            color: "#fff",
+            width: 500
+            }, 1000 );
+        } else {
+            $( "#efecto" ).animate({
+            backgroundColor: "#fff",
+            color: "#000",
+            width: 240
+            }, 1000 );
+        }
+        state = !state;
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+        <div id="efecto" class="ui-widget-content ui-corner-all">
+          <h3>Animación</h3>
+          <p>
+            Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
+          </p>
+        </div>
+    </div>
+       
+    <button id="boton">EFECTO 1</button>
+    <button id="boton2">EFECTO 2</button>
+
+</body>
+</html>
