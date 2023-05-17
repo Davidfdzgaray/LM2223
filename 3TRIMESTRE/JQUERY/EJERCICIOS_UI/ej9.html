@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <title>UI 1</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <title>UI 9</title>
     <script>
-    $(function() {
-        $("#arrastrar").draggable();
+    $( function() {
+        $( document ).tooltip();
     });
     </script>
 </head>
 <body>
-    <div id="arrastrar">Arrastra</div>
+    <input id="nombre" title="Introduzca su nombre"><br><br>
+    <input id="apellidos" title="Introduzca su apellidos"><br><br>
+    <input id="dni" title="Introduzca su DNI"><br><br>
+    <input id="correo" title="Introduzca su correo electrónico"><br><br>
+    <input id="contrasena" title="Introduzca su contraseña">
 </body>
 </html>

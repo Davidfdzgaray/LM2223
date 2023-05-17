@@ -2,18 +2,106 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" contenido="IE=edge">
+    <meta name="viewport" contenido="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <title>UI 1</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+    body {
+        min-width: 520px;
+    }
+    .columna {
+        width: 170px;
+        float: left;
+        padding-bottom: 100px;
+    }
+    .contenedor {
+        margin: 0 1em 1em 0;
+        padding: 0.3em;
+    }
+    .contenedor-cabecera {
+        padding: 0.2em 0.3em;
+        margin-bottom: 0.5em;
+        position: relative;
+    }
+    .contenedor-contenido {
+        padding: 0.4em;
+    }
+    /*DECORACION*/
+    .contenedor-toggle {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -8px;
+    }
+    .contenedor-placeholder {
+        border: 1px dotted black;
+        margin: 0 1em 1em 0;
+        height: 50px;
+    }
+    </style>
+    <title>UI 6</title>
     <script>
     $(function() {
-        $("#arrastrar").draggable();
+        $( ".columna" ).sortable({
+            connectWith: ".columna",
+            handle: ".contenedor-cabecera",
+            cancel: ".contenedor-toggle",
+            placeholder: "contenedor-placeholder ui-corner-all"
+        });
+        //DECORACION
+        $( ".contenedor" )
+            .addClass( "ui-widget ui-widget-contenido ui-helper-clearfix ui-corner-all" )
+            .find( ".contenedor-cabecera" )
+            .addClass( "ui-widget-cabecera ui-corner-all" )
+            .prepend( "<span class='ui-icon ui-icon-minusthick contenedor-toggle'></span>");
+        
+        $( ".contenedor-toggle" ).on( "click", function() {
+            var icon = $( this );
+            icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+            icon.closest( ".contenedor" ).find( ".contenedor-contenido" ).toggle();
+        });
     });
     </script>
 </head>
 <body>
-    <div id="arrastrar">Arrastra</div>
+    <div class="columna">
+ 
+        <div class="contenedor">
+          <div class="contenedor-cabecera">Feeds</div>
+          <div class="contenedor-contenido">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+        </div>
+       
+        <div class="contenedor">
+          <div class="contenedor-cabecera">News</div>
+          <div class="contenedor-contenido">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+        </div>
+       
+      </div>
+       
+      <div class="columna">
+       
+        <div class="contenedor">
+          <div class="contenedor-cabecera">Shopping</div>
+          <div class="contenedor-contenido">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+        </div>
+       
+      </div>
+       
+      <div class="columna">
+       
+        <div class="contenedor">
+          <div class="contenedor-cabecera">Links</div>
+          <div class="contenedor-contenido">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+        </div>
+       
+        <div class="contenedor">
+          <div class="contenedor-cabecera">Images</div>
+          <div class="contenedor-contenido">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+        </div>
+       
+    </div>
 </body>
 </html>

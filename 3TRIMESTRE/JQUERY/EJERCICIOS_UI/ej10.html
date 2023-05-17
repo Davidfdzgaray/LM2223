@@ -6,14 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <title>UI 1</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        #resultado {
+            height: 200px; 
+            width: 300px; 
+            overflow: auto;
+        }
+    </style>
+    <title>UI 10</title>
     <script>
-    $(function() {
-        $("#arrastrar").draggable();
+    $( function() {
+        /*var availableTags = [
+            "ActionScript",
+            "AppleScript",
+            "Asp",
+            "BASIC",
+            "C",
+            "C++",
+            "Clojure",
+            "COBOL",
+            "ColdFusion",
+            "Erlang",
+            "Fortran",
+            "Groovy",
+            "Haskell",
+            "Java",
+            "JavaScript",
+            "Lisp",
+            "Perl",
+            "PHP",
+            "Python",
+            "Ruby",
+            "Scala",
+            "Scheme"
+        ];*/
+        $( "#autocompletar" ).autocomplete({
+            //source: availableTags,
+            source: "search.php",
+            minLength : 2, //con cuantas letras empieza a autocompletar
+            select: function( event, ui ) {
+				resultado( "Selección: " + ui.item.value + " aka " + ui.item.id );
+			}
+        });
     });
     </script>
 </head>
 <body>
-    <div id="arrastrar">Arrastra</div>
+    <input id="autocompletar">
+    <div id="resultado"></div>
 </body>
 </html>
