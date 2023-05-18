@@ -58,7 +58,7 @@
 <body>
     <h1>Reserva pista pádel</h1>
     <div class="container">
-        <form action="">
+        <div>
             <label for="fecha">Día del partido:</label>
             <br><input type="text" name="fecha" id="fecha">
             <br>
@@ -90,9 +90,91 @@
             <button id="reserva">Reserva</button>
             <p id="diaReserva"></p>
             <p id="totalPrecio">Precio: </p>
-        </form>
-     </div>
+        </div>
+    </div>
     <script>
+        $( function() {
+            $.datepicker.regional['es'] = {
+                closeText: 'Cerrar',
+                prevText: '< Ant',
+                nextText: 'Sig >',
+                currentText: 'Hoy',
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+                dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''
+            };
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+   
+            $('#fecha').datepicker({
+                minDate: +1,
+                maxDate: "+1W"
+            });
+        });
+
+        $('document').ready(function(){
+            $('#reserva').click(function () {
+                var dia =  $("#fecha").val();
+                var hora =  $('select[name="hora"] option:selected').text();
+                var pista = $('select[name="pista"] option:selected').text();
+                var luz =  $("#luz").is(':checked');
+                var horaprecio = $('select[name="hora"] option:selected').val();
+                var precio = 0;
+
+                if (dia == '') {
+                    $('#diaReserva').html('Seleccione una fecha')
+                }
+                else {
+                    $('#diaReserva').html('La reserva será el dia '+dia+' en la '+pista+ ' a las '+hora+'.') ;
+                }
+
+                if (luz) {
+                    precio = precio + 4;
+                }
+
+                if (horaprecio == 1 || horaprecio == 2 ||horaprecio == 3 ||horaprecio == 4) {
+                    precio = precio + 10;
+                }
+                else if (horaprecio == 6 || horaprecio == 6) {
+                    precio = precio + 12;
+                }
+                else {
+                    precio = precio + 16;
+                }
+                
+                $('#totalPrecio').html(precio+' Euros.');
+            })
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //TAMBIEN ENTRA UI AUTOCOMPLETE DESDE un servidor (REMOTE DATASOURCE)
         //DATEPICKER CON RANGO EJ:SOLO ENTRE SEMANA DURANTE EL PROX MES/LOCALIZE CALENDAR EN ESPAÑOL
         //MENU

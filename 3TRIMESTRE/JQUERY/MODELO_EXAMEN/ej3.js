@@ -1,4 +1,23 @@
 $( function() {
+    $.datepicker.regional['es'] = {
+        closeText: 'Cerrar',
+        prevText: '< Ant',
+        nextText: 'Sig >',
+        currentText: 'Hoy',
+        monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+        dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+        dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+        dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+        weekHeader: 'Sm',
+        dateFormat: 'dd/mm/yy',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''
+    };
+    $.datepicker.setDefaults($.datepicker.regional['es']);
+   
     $('#f_entrada, #f_salida').datepicker({
         minDate: new Date(),
         maxDate: "+1Y"
@@ -25,6 +44,10 @@ $('document').ready(function(){
         }
         else if ($('#f_entrada').val() == "" || $('#f_salida').val() == "") {
             $('#totalDias').html('La fechas deben ser rellenadas'); 
+            $('#totalPrecio').html('0'); 
+        }
+        else if ($('#f_entrada').val() > $('#f_salida').val()) {
+            $('#totalDias').html('La fecha de entrada no puede ser posterior a la de salida'); 
             $('#totalPrecio').html('0'); 
         }
         else {

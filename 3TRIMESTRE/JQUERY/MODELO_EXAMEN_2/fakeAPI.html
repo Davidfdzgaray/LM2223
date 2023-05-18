@@ -85,15 +85,51 @@
     </div>
     <script>
     $(document).ready(function () {
+        
         $('#btn-producto').click(function () {
-            //imagen, título, descripción y precio.
+            let id = $('#codProducto').val();
+            $("#resultados").empty();
+            $.get("https://fakestoreapi.com/products/"+id)
+            .done(function (data) {
+                console.log(data);
+                let titulo = data.title;
+                let descripcion = data.description;
+                let imagen = data.image;
+                let precio = data.price;
+                $('#resultados').append(
+                '<h1>'+titulo+'</h1>' + 
+                '<p>'+'<img width="200" src="'+imagen+'"></p>' +
+                '<p>Descripcion: '+descripcion+'</p>' +
+                '<h2>Precio: ' + precio + '$</h2>');
+            })
+            .fail(function (){
+                alert("Error cargando datos del servidor");
+            });
         });
 
         $('#btn-todos').click(function () {
-            //imagen, título, descripción y precio.
+            $("#resultados").empty();
+            $.get("https://fakestoreapi.com/products")
+            .done(function (data) {
+                console.log(data);
+                let num_productos = data.length;
+                for (let i = 0; i < num_productos; i++) {
+                    let titulo = data[i].title;
+                    let precio = data[i].price;
+                    let imagen = data[i].image;
+                    let descripcion = data[i].description;                
+                    $('#resultados').append(
+                    '<h1>'+titulo+'</h1>' + 
+                    '<p>'+'<img width="200" src="'+imagen+'"></p>' +
+                    '<p>Descripcion: '+descripcion+'</p>' +
+                    '<h2>Precio: ' + precio + '$</h2>');
+                }
+            })
+            .fail(function (){
+                alert("Error cargando datos del servidor");
+            });
         });
     });
-    </script>
+</script>
 </body>
-
 </html>
