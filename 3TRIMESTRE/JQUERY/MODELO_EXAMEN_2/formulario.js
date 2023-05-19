@@ -110,7 +110,7 @@ $(document).ready(function () {
             $('#checkbox').html('');
         }
 
-        //COMPROBAMOS SI ESTA TODO BIEN
+        //COMPROBAMOS SI ESTA TODO BIEN Y sacamos el nombre
         if (valido) {
             var apellido1 = $('#apellido1').val().toLowerCase().substring(0,3);
             var apellido2 = $('#apellido2').val().toLowerCase().substring(0,3);
