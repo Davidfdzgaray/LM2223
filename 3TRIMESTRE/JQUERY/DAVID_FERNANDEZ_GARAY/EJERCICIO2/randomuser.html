@@ -118,9 +118,7 @@
                         let apodo = data.results[i].login.username;
                         let correo = data.results[i].email;
                         let ciudad = data.results[i].location.city;
-                        let avatar = data.results[i].picture.medium;
-                        $("#resultados").empty();
-                        $(".circle").attr("src", avatar);
+                        $(".circle").attr("src", 'multiple.png');
                         $('.fullname').html(nombre+' '+apellido);
                         $('.username').html(apodo);
                         $('.email').html(correo);
